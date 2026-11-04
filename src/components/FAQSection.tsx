@@ -15,45 +15,45 @@ export const FAQSection: React.FC = () => {
   }
 
   return (
-    <section id="faq" className="py-20 bg-brand-linen/40 relative">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6">
+    <section id="faq" className="py-12 sm:py-16 bg-brand-linen/40 relative">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6">
         {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-olive/10 border border-brand-olive/20 text-brand-olive text-xs font-semibold uppercase tracking-wider mb-3">
-            <HelpCircle className="w-3.5 h-3.5 text-brand-olive" />
+        <div className="text-center max-w-xl mx-auto mb-8">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-olive/10 border border-brand-olive/20 text-brand-olive text-[11px] font-semibold uppercase tracking-wider mb-2">
+            <HelpCircle className="w-3 h-3 text-brand-olive" />
             Preguntas Frecuentes
           </div>
-          <h2 className="text-3xl sm:text-4xl font-serif font-bold text-brand-dark tracking-tight mb-4">
+          <h2 className="text-2xl sm:text-3xl font-serif font-bold text-brand-dark tracking-tight mb-2">
             Todo lo que Necesitas Saber
           </h2>
-          <p className="text-brand-dark/70 text-base leading-relaxed">
-            Resolvemos las dudas más comunes sobre nuestras fórmulas botánicas, modos de uso, sedimentos herbales y envíos a todo Chile.
+          <p className="text-brand-dark/70 text-xs sm:text-sm leading-relaxed">
+            Resolvemos las dudas más comunes sobre nuestras fórmulas botánicas, modos de uso y envíos a todo Chile.
           </p>
         </div>
 
         {/* Accordion List */}
-        <div className="space-y-3.5">
+        <div className="space-y-2.5">
           {faqs.map((faq, index) => {
             const isOpen = openIndex === index
             return (
               <div
                 key={index}
-                className="bg-white rounded-2xl border border-brand-sage/20 overflow-hidden shadow-sm transition-all duration-200 hover:border-brand-olive/30"
+                className="bg-white rounded-xl border border-brand-sage/20 overflow-hidden shadow-xs transition-all duration-200 hover:border-brand-olive/30"
               >
                 <button
                   onClick={() => toggle(index)}
-                  className="w-full text-left p-5 sm:p-6 flex items-center justify-between gap-4 focus:outline-none"
+                  className="w-full text-left p-4 sm:p-4.5 flex items-center justify-between gap-3 focus:outline-none"
                   aria-expanded={isOpen}
                 >
-                  <span className="font-serif font-bold text-brand-dark text-base sm:text-lg pr-2">
+                  <span className="font-serif font-bold text-brand-dark text-sm sm:text-base pr-2">
                     {faq.question}
                   </span>
                   <div
-                    className={`w-8 h-8 rounded-full border border-brand-sage/20 flex items-center justify-center shrink-0 transition-transform duration-200 ${
+                    className={`w-7 h-7 rounded-full border border-brand-sage/20 flex items-center justify-center shrink-0 transition-transform duration-200 ${
                       isOpen ? 'bg-brand-olive text-white rotate-180' : 'bg-brand-linen text-brand-dark'
                     }`}
                   >
-                    <ChevronDown className="w-4 h-4" />
+                    <ChevronDown className="w-3.5 h-3.5" />
                   </div>
                 </button>
 
@@ -65,7 +65,7 @@ export const FAQSection: React.FC = () => {
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.25, ease: 'easeInOut' }}
                     >
-                      <div className="px-5 pb-6 sm:px-6 pt-1 text-sm sm:text-base text-brand-dark/75 leading-relaxed border-t border-brand-sage/10">
+                      <div className="px-4 pb-4 sm:px-5 pt-1 text-xs sm:text-sm text-brand-dark/75 leading-relaxed border-t border-brand-sage/10">
                         {faq.answer}
                       </div>
                     </motion.div>
@@ -100,3 +100,4 @@ export const FAQSection: React.FC = () => {
     </section>
   )
 }
+

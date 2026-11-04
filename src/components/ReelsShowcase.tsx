@@ -9,7 +9,7 @@ import { ReelShowcase } from '../types'
 export const ReelsShowcase: React.FC = () => {
   const reels = brandData.reels_showcase as ReelShowcase[]
   const [playingId, setPlayingId] = useState<string | null>(null)
-  const [isMuted, setIsMuted] = useState<boolean>(true)
+  const [isMuted, setIsMuted] = useState<boolean>(false) // Default unmuted so user hears real audio
   const videoRefs = useRef<{ [key: string]: HTMLVideoElement | null }>({})
 
   const togglePlay = (id: string) => {
@@ -22,12 +22,32 @@ export const ReelsShowcase: React.FC = () => {
     } else {
       // Pause any previously playing video
       if (playingId && videoRefs.current[playingId]) {
-        videoRefs.current[playingId]?.pause()
+        const prev = videoRefs.current[playingId]
+        if (prev) {
+          prev.pause()
+          prev.currentTime = 0
+        }
       }
-      video.play().catch(() => {
-        // Autoplay policy fallback
-      })
-      setPlayingId(id)
+
+      // Try playing with audio enabled
+      video.muted = isMuted
+      video.volume = 1.0
+      const playPromise = video.play()
+
+      if (playPromise !== undefined) {
+        playPromise
+          .then(() => {
+            setPlayingId(id)
+          })
+          .catch(() => {
+            // Autoplay policy fallback: mute and play
+            video.muted = true
+            setIsMuted(true)
+            video.play().then(() => {
+              setPlayingId(id)
+            }).catch(e => console.error('Play error', e))
+          })
+      }
     }
   }
 
@@ -36,43 +56,62 @@ export const ReelsShowcase: React.FC = () => {
     const newMuted = !isMuted
     setIsMuted(newMuted)
     Object.values(videoRefs.current).forEach(video => {
-      if (video) video.muted = newMuted
+      if (video) {
+        video.muted = newMuted
+        video.volume = 1.0
+      }
     })
   }
 
+  const toggleSingleVideoMute = (id: string, e: React.MouseEvent) => {
+    e.stopPropagation()
+    const video = videoRefs.current[id]
+    if (video) {
+      const nextMute = !video.muted
+      video.muted = nextMute
+      video.volume = 1.0
+      setIsMuted(nextMute)
+    }
+  }
+
   return (
-    <section id="reels" className="py-20 bg-brand-linen/60 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
-          <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-olive/10 border border-brand-olive/20 text-brand-olive text-xs font-semibold uppercase tracking-wider mb-3">
-              <Instagram className="w-3.5 h-3.5 text-brand-olive" />
+    <section id="reels" className="py-14 sm:py-18 bg-brand-linen/60 relative">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        
+        {/* Header with refined typography & proportions */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+          <div className="max-w-xl">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-olive/10 border border-brand-olive/20 text-brand-olive text-[11px] font-semibold uppercase tracking-wider mb-2">
+              <Instagram className="w-3 h-3 text-brand-olive" />
               Directo desde Instagram @rapunzel_organic
             </div>
-            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-brand-dark tracking-tight">
+            <h2 className="text-2xl sm:text-3xl font-serif font-bold text-brand-dark tracking-tight">
               Resultados Reales en Video
             </h2>
-            <p className="text-brand-dark/70 text-base mt-2">
-              Sin filtros ni promesas vacías: mira cómo nuestras clientas y creadores aplican los tratamientos botánicos y comprueban su crecimiento.
+            <p className="text-brand-dark/70 text-xs sm:text-sm mt-1.5 leading-relaxed">
+              Videos reales con audio de clientas comprobando el crecimiento y aplicación de los tratamientos botánicos.
             </p>
           </div>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2.5">
             <button
               onClick={toggleMute}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-brand-sage/30 bg-white text-xs font-medium text-brand-dark hover:border-brand-olive hover:text-brand-olive transition-colors shadow-sm"
-              title="Silenciar / Activar sonido"
+              className={`inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all shadow-xs ${
+                !isMuted
+                  ? 'bg-brand-olive text-white shadow-sm'
+                  : 'bg-white border border-brand-sage/30 text-brand-dark hover:border-brand-olive'
+              }`}
+              title="Activar / Desactivar Sonido"
             >
-              {isMuted ? (
+              {!isMuted ? (
                 <>
-                  <VolumeX className="w-4 h-4 text-brand-dark/60" />
-                  <span>Sonido silenciado</span>
+                  <Volume2 className="w-3.5 h-3.5 animate-pulse" />
+                  <span>Audio Activado</span>
                 </>
               ) : (
                 <>
-                  <Volume2 className="w-4 h-4 text-brand-olive" />
-                  <span className="text-brand-olive font-semibold">Sonido activado</span>
+                  <VolumeX className="w-3.5 h-3.5 text-red-500" />
+                  <span>Audio Silenciado</span>
                 </>
               )}
             </button>
@@ -80,26 +119,26 @@ export const ReelsShowcase: React.FC = () => {
               href="https://www.instagram.com/rapunzel_organic"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-brand-olive text-white text-xs font-medium hover:bg-brand-oliveDark transition-colors shadow-sm"
+              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white border border-brand-sage/30 text-brand-dark text-xs font-medium hover:border-brand-olive hover:text-brand-olive transition-colors shadow-xs"
             >
-              <Instagram className="w-4 h-4" />
-              Seguir en Instagram
+              <Instagram className="w-3.5 h-3.5 text-rose-600" />
+              <span>@rapunzel_organic</span>
             </a>
           </div>
         </div>
 
-        {/* Video Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Video Grid with more balanced spacing */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
           {reels.map((reel, index) => {
             const isCurrentPlaying = playingId === reel.id
             return (
               <motion.div
                 key={reel.id}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 15 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                className="group relative bg-white rounded-3xl overflow-hidden shadow-md shadow-brand-dark/5 border border-brand-sage/20 flex flex-col"
+                transition={{ duration: 0.35, delay: index * 0.05 }}
+                className="group relative bg-white rounded-2xl overflow-hidden shadow-xs hover:shadow-md border border-brand-sage/20 flex flex-col transition-all"
               >
                 {/* 9:16 Video Container */}
                 <div
@@ -114,65 +153,86 @@ export const ReelsShowcase: React.FC = () => {
                     poster={reel.thumbnail}
                     loop
                     playsInline
-                    muted={isMuted}
                     preload="metadata"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
                   />
 
-                  {/* Play / Pause Overlay Button */}
+                  {/* Play / Pause Center Overlay Button */}
                   <div
-                    className={`absolute inset-0 flex items-center justify-center transition-opacity duration-200 ${
-                      isCurrentPlaying ? 'opacity-0 group-hover:opacity-100 bg-black/20' : 'opacity-100 bg-black/35'
+                    className={`absolute inset-0 flex items-center justify-center transition-opacity duration-200 pointer-events-none ${
+                      isCurrentPlaying ? 'opacity-0 group-hover:opacity-100 bg-black/25' : 'opacity-100 bg-black/35'
                     }`}
                   >
-                    <div className="w-14 h-14 rounded-full bg-white/90 backdrop-blur-md flex items-center justify-center text-brand-dark shadow-lg transform transition-transform group-hover:scale-110">
+                    <div className="w-12 h-12 rounded-full bg-white/90 backdrop-blur-md flex items-center justify-center text-brand-dark shadow-md transform transition-transform group-hover:scale-110">
                       {isCurrentPlaying ? (
-                        <Pause className="w-6 h-6 fill-current text-brand-olive" />
+                        <Pause className="w-5 h-5 fill-current text-brand-olive" />
                       ) : (
-                        <Play className="w-6 h-6 fill-current text-brand-olive ml-1" />
+                        <Play className="w-5 h-5 fill-current text-brand-olive ml-0.5" />
                       )}
                     </div>
                   </div>
 
-                  {/* Top Badge */}
-                  <div className="absolute top-3 left-3 right-3 flex items-center justify-between pointer-events-none">
-                    <span className="bg-brand-dark/70 backdrop-blur-md text-white text-[10px] font-semibold px-2.5 py-1 rounded-full flex items-center gap-1">
-                      <Sparkles className="w-3 h-3 text-brand-gold" />
+                  {/* Top Badges */}
+                  <div className="absolute top-2.5 left-2.5 right-2.5 flex items-center justify-between pointer-events-none">
+                    <span className="bg-brand-dark/75 backdrop-blur-md text-white text-[9px] font-semibold px-2 py-0.5 rounded-full flex items-center gap-1">
+                      <Sparkles className="w-2.5 h-2.5 text-brand-gold" />
                       Reel Verificado
                     </span>
-                    <span className="bg-white/80 backdrop-blur-md text-brand-dark text-[10px] font-bold px-2 py-0.5 rounded-full">
-                      @rapunzel_organic
-                    </span>
                   </div>
+
+                  {/* Bottom Right Direct Audio Toggle Button */}
+                  <button
+                    onClick={(e) => toggleSingleVideoMute(reel.id, e)}
+                    className="absolute bottom-2.5 right-2.5 z-20 px-2 py-1 rounded-full bg-black/70 hover:bg-black/90 backdrop-blur-md text-white text-[10px] font-medium flex items-center gap-1 shadow-md transition-all active:scale-95"
+                    title={isMuted ? 'Activar sonido' : 'Silenciar'}
+                  >
+                    {isMuted ? (
+                      <>
+                        <VolumeX className="w-3 h-3 text-red-400" />
+                        <span className="text-[10px]">Sin sonido</span>
+                      </>
+                    ) : (
+                      <>
+                        <Volume2 className="w-3 h-3 text-emerald-400" />
+                        <span className="text-[10px] text-emerald-300 font-semibold">Con audio</span>
+                      </>
+                    )}
+                  </button>
+
+                  {/* Subtle helper pill when playing */}
+                  {isCurrentPlaying && (
+                    <div className="absolute top-2.5 right-2.5 bg-emerald-600/90 backdrop-blur-md text-white text-[9px] font-bold px-2 py-0.5 rounded-full animate-pulse pointer-events-none">
+                      Reproduciendo
+                    </div>
+                  )}
                 </div>
 
                 {/* Video Info & Real Spoken Quote */}
-                <div className="p-4 sm:p-5 flex-1 flex flex-col justify-between bg-white">
+                <div className="p-3.5 sm:p-4 flex-1 flex flex-col justify-between bg-white space-y-3">
                   <div>
-                    <h3 className="font-serif font-bold text-brand-dark text-base mb-2 line-clamp-2">
+                    <h3 className="font-serif font-bold text-brand-dark text-xs sm:text-sm mb-1.5 line-clamp-1">
                       {reel.title}
                     </h3>
 
                     {/* Spoken transcript quote */}
-                    <div className="bg-brand-linen/60 rounded-xl p-3 border border-brand-sage/15 text-xs text-brand-dark/80 relative">
-                      <Quote className="w-3.5 h-3.5 text-brand-olive/40 absolute -top-1.5 -left-1.5 bg-white rounded-full p-0.5 border border-brand-sage/20" />
-                      <p className="italic line-clamp-3 leading-relaxed">
+                    <div className="bg-brand-linen/70 rounded-xl p-2.5 border border-brand-sage/15 text-[11px] text-brand-dark/80 relative">
+                      <p className="italic line-clamp-2 leading-relaxed">
                         &ldquo;{reel.quote}&rdquo;
                       </p>
-                      <div className="mt-1 text-[11px] font-semibold text-brand-olive text-right">
+                      <div className="mt-1 text-[10px] font-semibold text-brand-olive text-right">
                         — {reel.speaker}
                       </div>
                     </div>
                   </div>
 
-                  <div className="mt-4 pt-3 border-t border-brand-sage/10 flex items-center justify-between">
+                  <div className="pt-2 border-t border-brand-sage/10 flex items-center justify-between text-[11px]">
                     <button
                       onClick={() => togglePlay(reel.id)}
-                      className="text-xs font-semibold text-brand-olive hover:text-brand-oliveDark flex items-center gap-1"
+                      className="font-semibold text-brand-olive hover:text-brand-oliveDark flex items-center gap-1"
                     >
-                      {isCurrentPlaying ? 'Pausar video' : 'Reproducir video'}
+                      {isCurrentPlaying ? 'Pausar' : 'Ver y escuchar'}
                     </button>
-                    <span className="text-[11px] text-brand-dark/40 font-mono">
+                    <span className="text-brand-dark/40 font-mono text-[10px]">
                       #{reel.code}
                     </span>
                   </div>

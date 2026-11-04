@@ -49,3 +49,4 @@ export function buildWhatsAppLink(
 
   return `https://wa.me/${cleanPhone}?text=${encodeURIComponent(message)}`
 }
+

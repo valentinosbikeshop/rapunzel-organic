@@ -85,3 +85,4 @@ graph TD
   3. Total final a pagar.
   4. Datos de despacho de la clienta (Nombre, Teléfono, Comuna, Región, Dirección).
   5. Consulta de método de pago (Transferencia o Tarjeta).
+

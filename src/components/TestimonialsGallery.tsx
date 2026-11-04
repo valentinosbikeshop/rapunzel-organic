@@ -111,30 +111,30 @@ export const TestimonialsGallery: React.FC = () => {
     : allTestimonials.filter(t => t.category === activeCategory)
 
   return (
-    <section id="testimonios" className="py-20 bg-white relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="testimonios" className="py-12 sm:py-16 bg-white relative">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-gold/15 border border-brand-gold/30 text-brand-dark text-xs font-semibold uppercase tracking-wider mb-3">
-            <Heart className="w-3.5 h-3.5 text-brand-gold fill-brand-gold" />
+        <div className="text-center max-w-2xl mx-auto mb-8">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-gold/15 border border-brand-gold/30 text-brand-dark text-[11px] font-semibold uppercase tracking-wider mb-2">
+            <Heart className="w-3 h-3 text-brand-gold fill-brand-gold" />
             +150.000 Melenas Transformadas en Chile
           </div>
-          <h2 className="text-3xl sm:text-4xl font-serif font-bold text-brand-dark tracking-tight mb-4">
+          <h2 className="text-2xl sm:text-3xl font-serif font-bold text-brand-dark tracking-tight mb-2">
             Resultados Reales de Nuestra Comunidad
           </h2>
-          <p className="text-brand-dark/70 text-base leading-relaxed">
-            Capturas y fotografías directas compartidas voluntariamente por clientas y clientes en nuestro WhatsApp e Instagram. Sin retoques ni promesas falsas.
+          <p className="text-brand-dark/70 text-xs sm:text-sm leading-relaxed">
+            Capturas y fotografías directas compartidas voluntariamente por clientas y clientes en nuestro WhatsApp e Instagram. Sin retoques.
           </p>
 
           {/* Category Tabs */}
-          <div className="flex flex-wrap items-center justify-center gap-2 mt-8">
+          <div className="flex flex-wrap items-center justify-center gap-1.5 mt-5">
             {categories.map(cat => (
               <button
                 key={cat.id}
                 onClick={() => setActiveCategory(cat.id)}
-                className={`px-4 py-2 rounded-full text-xs font-medium transition-all ${
+                className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all ${
                   activeCategory === cat.id
-                    ? 'bg-brand-olive text-white shadow-md shadow-brand-olive/20'
+                    ? 'bg-brand-olive text-white shadow-xs'
                     : 'bg-brand-linen text-brand-dark/70 hover:text-brand-dark hover:bg-brand-sand/60'
                 }`}
               >
@@ -145,17 +145,17 @@ export const TestimonialsGallery: React.FC = () => {
         </div>
 
         {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
           <AnimatePresence mode="popLayout">
             {filtered.map((item, index) => (
               <motion.div
                 key={item.id}
                 layout
-                initial={{ opacity: 0, scale: 0.95 }}
+                initial={{ opacity: 0, scale: 0.98 }}
                 animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.95 }}
-                transition={{ duration: 0.3, delay: index * 0.05 }}
-                className="bg-brand-linen/40 rounded-3xl border border-brand-sage/20 overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col"
+                exit={{ opacity: 0, scale: 0.98 }}
+                transition={{ duration: 0.25, delay: index * 0.04 }}
+                className="bg-brand-linen/40 rounded-2xl border border-brand-sage/20 overflow-hidden shadow-xs hover:shadow-sm transition-shadow flex flex-col"
               >
                 {/* Image Container with zoom trigger */}
                 <div
@@ -165,7 +165,7 @@ export const TestimonialsGallery: React.FC = () => {
                   <img
                     src={item.image}
                     alt={item.author}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                     <span className="bg-white/90 backdrop-blur-md text-brand-dark text-xs font-semibold px-3 py-1.5 rounded-full flex items-center gap-1.5 shadow-md">
@@ -173,37 +173,37 @@ export const TestimonialsGallery: React.FC = () => {
                       Ampliar foto
                     </span>
                   </div>
-                  <span className="absolute top-3 left-3 bg-brand-olive/90 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1 rounded-full">
+                  <span className="absolute top-2.5 left-2.5 bg-brand-olive/90 backdrop-blur-md text-white text-[9px] font-bold px-2 py-0.5 rounded-full">
                     {item.badge}
                   </span>
-                  <span className="absolute bottom-3 right-3 bg-white/90 backdrop-blur-md text-brand-dark text-[10px] font-semibold px-2.5 py-1 rounded-full">
+                  <span className="absolute bottom-2.5 right-2.5 bg-white/90 backdrop-blur-md text-brand-dark text-[9px] font-semibold px-2 py-0.5 rounded-full">
                     ⏱ {item.time_used}
                   </span>
                 </div>
 
                 {/* Content */}
-                <div className="p-5 flex-1 flex flex-col justify-between">
+                <div className="p-4 flex-1 flex flex-col justify-between">
                   <div>
                     {/* Stars */}
-                    <div className="flex items-center gap-1 mb-3">
+                    <div className="flex items-center gap-1 mb-2">
                       {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 fill-brand-gold text-brand-gold" />
+                        <Star key={i} className="w-3.5 h-3.5 fill-brand-gold text-brand-gold" />
                       ))}
-                      <span className="text-xs font-bold text-brand-dark ml-2">5.0</span>
+                      <span className="text-[11px] font-bold text-brand-dark ml-1.5">5.0</span>
                     </div>
 
-                    <p className="text-xs sm:text-sm text-brand-dark/80 italic leading-relaxed mb-4">
+                    <p className="text-xs text-brand-dark/80 italic leading-relaxed mb-3">
                       &ldquo;{item.quote}&rdquo;
                     </p>
                   </div>
 
-                  <div className="pt-3 border-t border-brand-sage/15 flex items-center justify-between">
+                  <div className="pt-2.5 border-t border-brand-sage/15 flex items-center justify-between">
                     <div>
                       <div className="text-xs font-bold text-brand-dark flex items-center gap-1">
                         {item.author}
-                        <CheckCircle2 className="w-3.5 h-3.5 text-brand-olive" />
+                        <CheckCircle2 className="w-3 h-3 text-brand-olive" />
                       </div>
-                      <div className="text-[11px] text-brand-olive font-medium mt-0.5">
+                      <div className="text-[10px] text-brand-olive font-medium">
                         Tratamiento: {item.product_used}
                       </div>
                     </div>
@@ -215,22 +215,22 @@ export const TestimonialsGallery: React.FC = () => {
         </div>
 
         {/* Trust Banner bottom */}
-        <div className="mt-12 bg-gradient-to-r from-brand-olive via-brand-oliveDark to-brand-olive rounded-3xl p-6 sm:p-8 text-white text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl shadow-brand-olive/15">
-          <div className="max-w-xl">
-            <h3 className="text-xl sm:text-2xl font-serif font-bold mb-2">
+        <div className="mt-8 bg-gradient-to-r from-brand-olive via-brand-oliveDark to-brand-olive rounded-2xl p-5 sm:p-6 text-white text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-4 shadow-md">
+          <div className="max-w-md">
+            <h3 className="text-lg sm:text-xl font-serif font-bold mb-1">
               ¿Quieres compartir tu testimonio con nosotras?
             </h3>
-            <p className="text-white/80 text-sm">
-              Envíanos tus fotos de antes y después por WhatsApp. ¡Premiamos tu constancia con descuentos exclusivos en tus siguientes pedidos!
+            <p className="text-white/80 text-xs">
+              Envíanos tus fotos de antes y después por WhatsApp. ¡Premiamos tu constancia con descuentos exclusivos!
             </p>
           </div>
           <a
             href="https://wa.me/56953672027?text=Hola%20Rapunzel%20Organic,%20quiero%20compartir%20mi%20testimonio%20de%20antes%20y%20despu%C3%A9s"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-white text-brand-olive px-6 py-3 rounded-full font-bold text-sm shadow-md hover:bg-brand-linen transition-colors shrink-0"
+            className="inline-flex items-center gap-1.5 bg-white text-brand-olive px-5 py-2.5 rounded-full font-bold text-xs shadow-sm hover:bg-brand-linen transition-colors shrink-0"
           >
-            <MessageCircle className="w-4 h-4 text-emerald-600" />
+            <MessageCircle className="w-3.5 h-3.5 text-emerald-600" />
             Enviar mi caso por WhatsApp
           </a>
         </div>
@@ -268,3 +268,4 @@ export const TestimonialsGallery: React.FC = () => {
     </section>
   )
 }
+

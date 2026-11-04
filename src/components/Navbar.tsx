@@ -22,20 +22,20 @@ export function Navbar() {
   return (
     <>
       {/* Top Notification Announcement Bar */}
-      <div className="bg-botanical-800 text-[#F5F7ED] text-xs py-2 px-4 text-center font-medium tracking-wide flex items-center justify-center gap-2">
-        <Sparkles className="w-3.5 h-3.5 text-secondary_sage animate-pulse" />
+      <div className="bg-botanical-800 text-[#F5F7ED] text-[11px] py-1.5 px-4 text-center font-medium tracking-wide flex items-center justify-center gap-2">
+        <Sparkles className="w-3 h-3 text-secondary_sage animate-pulse" />
         <span>Envíos a todo Chile vía Starken & Chilexpress • <strong>+150.000 clientes felices</strong> 🇨🇱</span>
         <span className="hidden sm:inline opacity-60">|</span>
-        <span className="hidden sm:inline">Despachos semanales garantizados</span>
+        <span className="hidden sm:inline">Despachos semanales</span>
       </div>
 
       {/* Main Sticky Navbar */}
       <header className="sticky top-0 z-40 bg-[#FBF9F7]/95 backdrop-blur-md border-b border-border-soft transition-all duration-300">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 sm:h-18 flex items-center justify-between">
           
           {/* Brand Logo & Tagline */}
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-botanical-600 shadow-sm transition-transform duration-300 group-hover:scale-105">
+          <Link href="/" className="flex items-center gap-2.5 group">
+            <div className="relative w-9 h-9 sm:w-10 sm:h-10 rounded-full overflow-hidden border-2 border-botanical-600 shadow-xs transition-transform duration-300 group-hover:scale-105">
               <Image
                 src="/images/brand/logo.jpg"
                 alt="Rapunzel Organic Logo"
@@ -45,22 +45,22 @@ export function Navbar() {
               />
             </div>
             <div>
-              <span className="font-serif text-xl sm:text-2xl font-bold tracking-tight text-botanical-800 block">
+              <span className="font-serif text-lg sm:text-xl font-bold tracking-tight text-botanical-800 block leading-tight">
                 Rapunzel <span className="font-normal italic text-botanical-600">Organic</span>
               </span>
-              <span className="text-[10px] sm:text-xs text-charcoal-muted tracking-wider uppercase block font-medium">
+              <span className="text-[9px] sm:text-[10px] text-charcoal-muted tracking-wider uppercase block font-medium">
                 Crecimiento Capilar • 98% Orgánico
               </span>
             </div>
           </Link>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-6">
             {navLinks.map(link => (
               <a
                 key={link.name}
                 href={link.href}
-                className="text-sm font-medium text-charcoal hover:text-botanical-600 transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-botanical-600 hover:after:w-full after:transition-all after:duration-200"
+                className="text-xs font-semibold text-charcoal/80 hover:text-botanical-600 transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-botanical-600 hover:after:w-full after:transition-all after:duration-200"
               >
                 {link.name}
               </a>
@@ -68,15 +68,15 @@ export function Navbar() {
           </nav>
 
           {/* Action Buttons: WhatsApp & Cart */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2.5">
             <a
               href={`https://wa.me/${brandData.brand.logistics.whatsapp_raw}?text=${encodeURIComponent('¡Hola Rapunzel Organic! 🌿 Tengo una duda antes de comprar:')}`}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Contactar por WhatsApp"
-              className="hidden sm:flex items-center gap-2 text-xs font-semibold px-3.5 py-2 rounded-full bg-[#25D366]/10 text-[#128C7E] hover:bg-[#25D366]/20 transition-colors"
+              className="hidden sm:flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-full bg-[#25D366]/10 text-[#128C7E] hover:bg-[#25D366]/20 transition-colors"
             >
-              <MessageCircle className="w-4 h-4 text-[#25D366]" />
+              <MessageCircle className="w-3.5 h-3.5 text-[#25D366]" />
               <span>WhatsApp Oficial</span>
             </a>
 
@@ -84,12 +84,12 @@ export function Navbar() {
             <button
               onClick={() => setIsCartOpen(true)}
               aria-label="Abrir carrito de compras"
-              className="relative p-2.5 sm:px-4 sm:py-2.5 rounded-full bg-botanical-600 hover:bg-botanical-700 text-white font-medium text-sm flex items-center gap-2 shadow-sm transition-all duration-200 active:scale-95"
+              className="relative p-2 sm:px-3 sm:py-1.5 rounded-full bg-botanical-600 hover:bg-botanical-700 text-white font-medium text-xs flex items-center gap-1.5 shadow-xs transition-all duration-200 active:scale-95"
             >
-              <ShoppingBag className="w-5 h-5" />
+              <ShoppingBag className="w-4 h-4" />
               <span className="hidden sm:inline">Carrito</span>
               {totalItems > 0 && (
-                <span className="bg-amber-oil text-white text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center animate-bounce">
+                <span className="bg-amber-oil text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">
                   {totalItems}
                 </span>
               )}
@@ -98,10 +98,10 @@ export function Navbar() {
             {/* Mobile Menu Toggle */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-lg text-charcoal hover:bg-surface-soft lg:hidden"
+              className="p-1.5 rounded-lg text-charcoal hover:bg-surface-soft lg:hidden"
               aria-label="Abrir menú"
             >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
           </div>
         </div>
@@ -136,3 +136,4 @@ export function Navbar() {
     </>
   )
 }
+

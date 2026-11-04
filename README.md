@@ -53,3 +53,4 @@ npm run build
 - **Instagram:** [@rapunzel_organic](https://www.instagram.com/rapunzel_organic) (288.000 seguidores)
 - **WhatsApp Oficial:** [+56 9 5367 2027](https://wa.me/56953672027)
 - **Logística:** Despachos a todo Chile vía Starken y transporte privado semanal en Santiago.
+

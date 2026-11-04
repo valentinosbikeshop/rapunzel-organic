@@ -31,31 +31,31 @@ export function ProductDetailModal() {
       />
 
       {/* Modal Dialog Box */}
-      <div className="relative bg-white w-full max-w-3xl rounded-3xl shadow-2xl overflow-hidden border border-border-soft z-10 my-8 flex flex-col max-h-[90vh]">
+      <div className="relative bg-white w-full max-w-2xl rounded-2xl shadow-xl overflow-hidden border border-border-soft z-10 my-6 flex flex-col max-h-[88vh]">
         
         {/* Modal Close Button */}
         <button
           onClick={() => setSelectedProductForModal(null)}
-          className="absolute top-4 right-4 z-20 p-2.5 rounded-full bg-white/80 hover:bg-white text-charcoal shadow-sm transition-transform active:scale-90"
+          className="absolute top-3.5 right-3.5 z-20 p-2 rounded-full bg-white/90 hover:bg-white text-charcoal shadow-xs transition-transform active:scale-90"
           aria-label="Cerrar modal"
         >
-          <X className="w-5 h-5" />
+          <X className="w-4 h-4" />
         </button>
 
-        <div className="overflow-y-auto p-6 sm:p-8 space-y-6">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+        <div className="overflow-y-auto p-5 sm:p-6 space-y-5">
+          <div className="grid grid-cols-1 sm:grid-cols-12 gap-6 items-start">
             
             {/* Gallery Column */}
-            <div className="md:col-span-5 space-y-3">
-              <div className="relative w-full aspect-square rounded-2xl overflow-hidden bg-[#FBF9F7] border border-border-soft">
+            <div className="sm:col-span-5 space-y-2.5">
+              <div className="relative w-full aspect-square rounded-xl overflow-hidden bg-[#FBF9F7] border border-border-soft p-2">
                 <Image
                   src={images[activeImageIndex] || product.image}
                   alt={product.name}
                   fill
-                  className="object-cover"
+                  className="object-contain p-2"
                 />
                 {product.badge && (
-                  <span className="absolute top-3 left-3 bg-botanical-800 text-white text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                  <span className="absolute top-2.5 left-2.5 bg-botanical-800 text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">
                     {product.badge}
                   </span>
                 )}
@@ -68,11 +68,11 @@ export function ProductDetailModal() {
                     <button
                       key={idx}
                       onClick={() => setActiveImageIndex(idx)}
-                      className={`relative w-16 h-16 rounded-xl overflow-hidden border-2 transition-all ${
+                      className={`relative w-12 h-12 rounded-lg overflow-hidden border transition-all p-1 bg-white ${
                         activeImageIndex === idx ? 'border-botanical-600 scale-105' : 'border-border-soft opacity-70'
                       }`}
                     >
-                      <Image src={img} alt="" fill className="object-cover" />
+                      <Image src={img} alt="" fill className="object-contain p-0.5" />
                     </button>
                   ))}
                 </div>
@@ -91,45 +91,45 @@ export function ProductDetailModal() {
             </div>
 
             {/* Info & Content Column */}
-            <div className="md:col-span-7 space-y-4">
+            <div className="sm:col-span-7 space-y-3">
               
               {/* Rating */}
-              <div className="flex items-center gap-1.5 text-xs text-charcoal-muted">
+              <div className="flex items-center gap-1.5 text-[11px] text-charcoal-muted">
                 <div className="flex text-amber-500">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-3.5 h-3.5 fill-current" />
+                    <Star key={i} className="w-3 h-3 fill-current" />
                   ))}
                 </div>
                 <span className="font-semibold text-charcoal">{product.rating}</span>
-                <span>({product.reviews_count} valoraciones verificadas)</span>
+                <span>({product.reviews_count} opiniones)</span>
               </div>
 
               {/* Title & Format */}
               <div>
-                <h2 className="font-serif text-2xl sm:text-3xl font-bold text-botanical-900 leading-tight">
+                <h2 className="font-serif text-xl sm:text-2xl font-bold text-botanical-900 leading-snug">
                   {product.name}
                 </h2>
-                <p className="text-xs text-botanical-700 font-semibold mt-1">
+                <p className="text-[11px] text-botanical-700 font-semibold mt-0.5">
                   Presentación: {product.format}
                 </p>
               </div>
 
               {/* Price Row */}
-              <div className="flex items-baseline gap-3 py-2 border-y border-border-soft">
+              <div className="flex items-baseline gap-2.5 py-1.5 border-y border-border-soft">
                 {product.offer_price ? (
                   <>
-                    <span className="text-2xl sm:text-3xl font-extrabold text-botanical-800">
+                    <span className="text-xl sm:text-2xl font-bold text-botanical-800">
                       {formatCLP(product.offer_price)}
                     </span>
-                    <span className="text-sm text-charcoal-muted line-through">
+                    <span className="text-xs text-charcoal-muted line-through">
                       {formatCLP(product.price)}
                     </span>
-                    <span className="text-xs bg-amber-100 text-amber-800 font-bold px-2.5 py-0.5 rounded-full">
+                    <span className="text-[10px] bg-amber-100 text-amber-800 font-bold px-2 py-0.2 rounded-full">
                       Oferta Web
                     </span>
                   </>
                 ) : (
-                  <span className="text-2xl sm:text-3xl font-extrabold text-botanical-800">
+                  <span className="text-xl sm:text-2xl font-bold text-botanical-800">
                     {formatCLP(product.price)}
                   </span>
                 )}
@@ -238,3 +238,4 @@ export function ProductDetailModal() {
     </div>
   )
 }
+
