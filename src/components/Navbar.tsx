@@ -3,6 +3,7 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { ShoppingBag, Menu, X, Sparkles, MessageCircle } from 'lucide-react'
 import { useCart } from '@/context/CartContext'
 import brandData from '@/data/brand_bible.json'
@@ -10,14 +11,20 @@ import brandData from '@/data/brand_bible.json'
 export function Navbar() {
   const { totalItems, setIsCartOpen } = useCart()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const pathname = usePathname()
 
   const navLinks = [
-    { name: 'Catálogo', href: '#catalogo' },
-    { name: 'Diagnóstico Capilar', href: '#diagnostico' },
-    { name: 'Aprende a Usarlos', href: '#reels' },
-    { name: 'Antes y Después', href: '#testimonios' },
-    { name: 'Envíos y FAQ', href: '#faq' },
+    { name: 'Catálogo', href: '/catalogo/' },
+    { name: 'Diagnóstico Capilar', href: '/diagnostico/' },
+    { name: 'Aprende a Usarlos', href: '/tutoriales/' },
+    { name: 'Antes y Después', href: '/testimonios/' },
+    { name: 'Envíos y FAQ', href: '/faq/' },
   ]
+
+  const isActive = (href: string) => {
+    if (href === '/') return pathname === '/'
+    return pathname.startsWith(href.replace(/\/$/, ''))
+  }
 
   return (
     <>
@@ -56,15 +63,22 @@ export function Navbar() {
 
           {/* Desktop Navigation Links */}
           <nav className="hidden lg:flex items-center gap-6">
-            {navLinks.map(link => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="text-xs font-semibold text-charcoal/80 hover:text-botanical-600 transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-botanical-600 hover:after:w-full after:transition-all after:duration-200"
-              >
-                {link.name}
-              </a>
-            ))}
+            {navLinks.map(link => {
+              const active = isActive(link.href)
+              return (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className={`text-xs font-semibold transition-colors py-1 relative ${
+                    active
+                      ? 'text-botanical-700 font-bold after:content-[\'\'] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-botanical-600'
+                      : 'text-charcoal/80 hover:text-botanical-600 after:content-[\'\'] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-botanical-600 hover:after:w-full after:transition-all after:duration-200'
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              )
+            })}
           </nav>
 
           {/* Action Buttons: WhatsApp & Cart */}
@@ -108,26 +122,31 @@ export function Navbar() {
 
         {/* Mobile Dropdown Menu */}
         {mobileMenuOpen && (
-          <div className="lg:hidden border-b border-border-soft bg-[#FBF9F7] px-4 pt-2 pb-6 space-y-3 animate-in fade-in slide-in-from-top-4">
-            {navLinks.map(link => (
-              <a
-                key={link.name}
-                href={link.href}
-                onClick={() => setMobileMenuOpen(false)}
-                className="block py-2.5 text-base font-medium text-charcoal hover:text-botanical-600 border-b border-border-soft/50"
-              >
-                {link.name}
-              </a>
-            ))}
+          <div className="lg:hidden border-b border-border-soft bg-[#FBF9F7] px-4 pt-2 pb-6 space-y-2 animate-in fade-in slide-in-from-top-4">
+            {navLinks.map(link => {
+              const active = isActive(link.href)
+              return (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={`block py-2.5 text-sm font-medium border-b border-border-soft/50 ${
+                    active ? 'text-botanical-700 font-bold' : 'text-charcoal hover:text-botanical-600'
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              )
+            })}
             <div className="pt-2">
               <a
-                href={`https://wa.me/${brandData.brand.logistics.whatsapp_raw}`}
+                href={`https://wa.me/${brandData.brand.logistics.whatsapp_raw}?text=${encodeURIComponent('¡Hola Rapunzel Organic! 🌿 Quiero hacer una consulta:')}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-[#25D366] text-white font-semibold text-sm shadow-sm"
+                className="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-[#25D366] text-white text-xs font-bold"
               >
-                <MessageCircle className="w-5 h-5" />
-                <span>Hablar por WhatsApp (+56 9 5367 2027)</span>
+                <MessageCircle className="w-4 h-4" />
+                <span>Asesoría por WhatsApp</span>
               </a>
             </div>
           </div>
@@ -136,4 +155,3 @@ export function Navbar() {
     </>
   )
 }
-

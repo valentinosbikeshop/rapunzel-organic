@@ -46,32 +46,32 @@ export const Footer: React.FC = () => {
           {/* Col 2: Navigation Links */}
           <div className="space-y-3">
             <h4 className="font-serif font-bold text-white text-base">
-              Navegación Rápida
+              Navegación
             </h4>
             <ul className="space-y-2 text-xs sm:text-sm text-white/70">
               <li>
-                <a href="#catalogo" className="hover:text-brand-gold transition-colors">
+                <a href="/catalogo/" className="hover:text-brand-gold transition-colors">
                   Catálogo de Productos y Packs
                 </a>
               </li>
               <li>
-                <a href="#quiz" className="hover:text-brand-gold transition-colors">
+                <a href="/diagnostico/" className="hover:text-brand-gold transition-colors">
                   Test de Diagnóstico Capilar
                 </a>
               </li>
               <li>
-                <a href="#reels" className="hover:text-brand-gold transition-colors">
-                  Videos y Resultados en Instagram
+                <a href="/tutoriales/" className="hover:text-brand-gold transition-colors">
+                  Aprende a Usarlos (Reels)
                 </a>
               </li>
               <li>
-                <a href="#testimonios" className="hover:text-brand-gold transition-colors">
+                <a href="/testimonios/" className="hover:text-brand-gold transition-colors">
                   Antes y Después Reales
                 </a>
               </li>
               <li>
-                <a href="#faq" className="hover:text-brand-gold transition-colors">
-                  Preguntas Frecuentes
+                <a href="/faq/" className="hover:text-brand-gold transition-colors">
+                  Envíos a todo Chile y FAQ
                 </a>
               </li>
             </ul>

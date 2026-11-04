@@ -55,7 +55,7 @@ export function Hero() {
             {/* Dual CTAs - Refined sizing */}
             <div className="flex flex-col sm:flex-row items-center gap-3 pt-2 justify-center lg:justify-start">
               <a
-                href="#catalogo"
+                href="/catalogo/"
                 className="w-full sm:w-auto px-6 py-2.5 rounded-full bg-botanical-600 hover:bg-botanical-700 text-white font-semibold text-xs sm:text-sm shadow-sm hover:shadow-md transition-all flex items-center justify-center gap-1.5 active:scale-98"
               >
                 <span>Ver Catálogo de Productos</span>
@@ -63,7 +63,7 @@ export function Hero() {
               </a>
 
               <a
-                href="#diagnostico"
+                href="/diagnostico/"
                 className="w-full sm:w-auto px-5 py-2.5 rounded-full bg-white hover:bg-surface-soft text-botanical-800 border border-botanical-600/30 hover:border-botanical-600 font-semibold text-xs sm:text-sm transition-all flex items-center justify-center gap-1.5 shadow-xs"
               >
                 <span>Hacer Diagnóstico Capilar</span>

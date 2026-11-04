@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import { Playfair_Display, Plus_Jakarta_Sans } from 'next/font/google'
 import './globals.css'
 import { CartProvider } from '@/context/CartContext'
+import { Navbar } from '@/components/Navbar'
+import { Footer } from '@/components/Footer'
 import { CartDrawer } from '@/components/CartDrawer'
 import { ProductDetailModal } from '@/components/ProductDetailModal'
 
@@ -18,7 +20,11 @@ const jakarta = Plus_Jakarta_Sans({
 })
 
 export const metadata: Metadata = {
-  title: 'Rapunzel Organic | Crecimiento Capilar & Fórmulas Botánicas Chile',
+  metadataBase: new URL('https://rapunzel-organic.vercel.app'),
+  title: {
+    default: 'Rapunzel Organic | Crecimiento Capilar & Fórmulas Botánicas Chile',
+    template: '%s | Rapunzel Organic'
+  },
   description:
     'Especialistas en recuperación capilar y freno de la caída. Fórmulas botánicas 98% orgánicas con batana oil, romero destilado y decocción de 20 hierbas medicinales. +150.000 clientes en Chile.',
   keywords: [
@@ -37,7 +43,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Rapunzel Organic | Fórmulas Botánicas de Crecimiento Capilar',
     description: 'Recupera tu cabello y frena la caída con más de 20 hierbas medicinales y batana oil puro. Despachos a todo Chile.',
-    url: 'https://instagram.com/rapunzel_organic',
+    url: 'https://rapunzel-organic.vercel.app',
     siteName: 'Rapunzel Organic Chile',
     images: [
       {
@@ -61,7 +67,9 @@ export default function RootLayout({
     <html lang="es" className={`${playfair.variable} ${jakarta.variable} scroll-smooth`}>
       <body className="bg-brand-linen text-brand-dark min-h-screen flex flex-col font-sans antialiased selection:bg-brand-olive selection:text-white">
         <CartProvider>
-          {children}
+          <Navbar />
+          <main className="flex-1">{children}</main>
+          <Footer />
           <CartDrawer />
           <ProductDetailModal />
         </CartProvider>
@@ -69,4 +77,3 @@ export default function RootLayout({
     </html>
   )
 }
-
