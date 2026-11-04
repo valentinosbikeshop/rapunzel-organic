@@ -1,0 +1,134 @@
+{
+  "project": "Rapunzel Organic E-Commerce & Brand Engine",
+  "generated_at": "2026-11-04T17:36:00Z",
+  "architecture": {
+    "framework": "Next.js 14 (App Router, SSG Static Export)",
+    "styling": "Tailwind CSS + Custom Botanical Design System",
+    "state_management": "React Context (CartContext + localStorage sync)",
+    "checkout_engine": "WhatsApp Direct Checkout API (wa.me/56953672027)",
+    "media_engine": "Native HTML5 Video + Responsive Images (Zero Cloud Dependencies)"
+  },
+  "nodes": [
+    {
+      "id": "data/brand_bible.json",
+      "type": "database/knowledge_graph",
+      "description": "Master single source of truth containing brand DNA, color palette, product catalog, quiz decision trees, reel transcripts, and real testimonials.",
+      "exports": ["brand", "products", "quiz", "testimonials", "reels_showcase", "faq"]
+    },
+    {
+      "id": "src/types/index.ts",
+      "type": "type_definitions",
+      "description": "TypeScript interfaces for Product, CartItem, CustomerInfo, QuizQuestion, Testimonial, ReelShowcase, FAQItem."
+    },
+    {
+      "id": "src/context/CartContext.tsx",
+      "type": "state_provider",
+      "description": "Cart provider with localStorage persistence, quantity mutations, and modal state management.",
+      "dependencies": ["src/types/index.ts"]
+    },
+    {
+      "id": "src/utils/format.ts",
+      "type": "utility",
+      "description": "CLP Chilean peso currency formatter and structured WhatsApp checkout link generator.",
+      "functions": ["formatCLP", "buildWhatsAppLink"]
+    },
+    {
+      "id": "src/components/Navbar.tsx",
+      "type": "ui_component",
+      "description": "Sticky botanical navigation bar with trust bar, logo, quick links, and cart badge.",
+      "dependencies": ["src/context/CartContext.tsx", "src/data/brand_bible.json"]
+    },
+    {
+      "id": "src/components/Hero.tsx",
+      "type": "ui_component",
+      "description": "Botanical hero section with real slogans, +150.000 clients proof, dual CTAs, and featured pack visual.",
+      "dependencies": ["src/data/brand_bible.json"]
+    },
+    {
+      "id": "src/components/Catalog.tsx",
+      "type": "ui_component",
+      "description": "Filterable product catalog by category and hair concern, with real pricing and quick add-to-cart.",
+      "dependencies": ["src/data/brand_bible.json", "src/context/CartContext.tsx", "src/utils/format.ts"]
+    },
+    {
+      "id": "src/components/ProductDetailModal.tsx",
+      "type": "ui_component",
+      "description": "Interactive product modal with gallery selector, step-by-step usage guide, and active herbal ingredients.",
+      "dependencies": ["src/context/CartContext.tsx", "src/utils/format.ts"]
+    },
+    {
+      "id": "src/components/HairQuiz.tsx",
+      "type": "ui_component",
+      "description": "Interactive 3-question diagnostic engine with algorithmic recommendation and instant cart dispatch.",
+      "dependencies": ["src/data/brand_bible.json", "src/context/CartContext.tsx", "src/utils/format.ts", "src/types/index.ts"]
+    },
+    {
+      "id": "src/components/ReelsShowcase.tsx",
+      "type": "ui_component",
+      "description": "Vertical 9:16 Instagram Reels video showcase with audio toggle and real transcribed client quotes.",
+      "dependencies": ["src/data/brand_bible.json", "src/types/index.ts"]
+    },
+    {
+      "id": "src/components/TestimonialsGallery.tsx",
+      "type": "ui_component",
+      "description": "Categorized social proof gallery with real before/after photo comparisons and lightbox inspection.",
+      "dependencies": ["src/data/brand_bible.json", "src/types/index.ts"]
+    },
+    {
+      "id": "src/components/FAQSection.tsx",
+      "type": "ui_component",
+      "description": "Accordion FAQ answering sedimentation, bifasic properties, nursing safety, and Chilean courier logistics.",
+      "dependencies": ["src/data/brand_bible.json", "src/types/index.ts"]
+    },
+    {
+      "id": "src/components/CartDrawer.tsx",
+      "type": "ui_component",
+      "description": "Slide-over shopping cart with delivery information form and direct WhatsApp checkout trigger.",
+      "dependencies": ["src/context/CartContext.tsx", "src/utils/format.ts", "src/data/brand_bible.json"]
+    },
+    {
+      "id": "src/components/Footer.tsx",
+      "type": "ui_component",
+      "description": "Botanical brand footer with official contact links, courier logistics, and operating hours.",
+      "dependencies": ["src/data/brand_bible.json"]
+    },
+    {
+      "id": "src/app/layout.tsx",
+      "type": "app_layout",
+      "description": "Root layout integrating Google fonts, SEO metadata, OpenGraph tags, CartProvider, and global drawers.",
+      "dependencies": ["src/context/CartContext.tsx", "src/components/CartDrawer.tsx", "src/components/ProductDetailModal.tsx"]
+    },
+    {
+      "id": "src/app/page.tsx",
+      "type": "page_entrypoint",
+      "description": "Main static page assembling all sections in sequence.",
+      "dependencies": [
+        "src/components/Navbar.tsx",
+        "src/components/Hero.tsx",
+        "src/components/Catalog.tsx",
+        "src/components/HairQuiz.tsx",
+        "src/components/ReelsShowcase.tsx",
+        "src/components/TestimonialsGallery.tsx",
+        "src/components/FAQSection.tsx",
+        "src/components/Footer.tsx"
+      ]
+    }
+  ],
+  "edges": [
+    { "from": "src/app/page.tsx", "to": "src/components/Navbar.tsx" },
+    { "from": "src/app/page.tsx", "to": "src/components/Hero.tsx" },
+    { "from": "src/app/page.tsx", "to": "src/components/Catalog.tsx" },
+    { "from": "src/app/page.tsx", "to": "src/components/HairQuiz.tsx" },
+    { "from": "src/app/page.tsx", "to": "src/components/ReelsShowcase.tsx" },
+    { "from": "src/app/page.tsx", "to": "src/components/TestimonialsGallery.tsx" },
+    { "from": "src/app/page.tsx", "to": "src/components/FAQSection.tsx" },
+    { "from": "src/app/page.tsx", "to": "src/components/Footer.tsx" },
+    { "from": "src/components/Catalog.tsx", "to": "data/brand_bible.json" },
+    { "from": "src/components/HairQuiz.tsx", "to": "data/brand_bible.json" },
+    { "from": "src/components/ReelsShowcase.tsx", "to": "data/brand_bible.json" },
+    { "from": "src/components/TestimonialsGallery.tsx", "to": "data/brand_bible.json" },
+    { "from": "src/components/FAQSection.tsx", "to": "data/brand_bible.json" },
+    { "from": "src/components/CartDrawer.tsx", "to": "src/utils/format.ts" },
+    { "from": "src/utils/format.ts", "to": "wa.me/56953672027" }
+  ]
+}

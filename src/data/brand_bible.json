@@ -1,0 +1,475 @@
+{
+  "brand": {
+    "name": "Rapunzel Organic",
+    "handle": "@rapunzel_organic",
+    "verified_community_size": "+150.000 clientes en Chile 🇨🇱",
+    "instagram_followers": "288.000 seguidores",
+    "slogan": "Cuida tu cabello con amor",
+    "mission": "Recuperar la salud y densidad capilar mediante fitoterapia botánica, extractos puros y formulaciones 98% orgánicas libres de químicos agresivos y sin testeo animal.",
+    "badges": [
+      "100% Hecho en Chile",
+      "98% Ingredientes Orgánicos",
+      "Libre de Sulfatos y Parabenos",
+      "Cruelty-Free (Libre de Crueldad)",
+      "Apto para Todo Tipo de Cabello",
+      "Resultados Notorios en 1 a 3 Meses"
+    ],
+    "tone_of_voice": {
+      "greeting": "¡Hola bella! 🌿 / Hola bella comunidad",
+      "style": "Cálido, empático, botánico, experto en salud capilar y transparente",
+      "recurring_terms": [
+        "crecimiento acelerado",
+        "detener la caída",
+        "estimular folículos",
+        "recuperar zonas despobladas",
+        "fórmula bifásica",
+        "plantas medicinales",
+        "batana oil",
+        "aceite de romero",
+        "biotina"
+      ]
+    },
+    "colors": {
+      "primary": "#5B6434",
+      "primary_dark": "#3B4220",
+      "primary_light": "#768245",
+      "secondary_sage": "#9BA75A",
+      "accent_lavender": "#91749D",
+      "accent_lilac": "#B5A0BE",
+      "accent_amber": "#C87A38",
+      "accent_rose": "#E89AA8",
+      "background_light": "#FBF9F7",
+      "surface_card": "#FFFFFF",
+      "surface_alt": "#F3EFEA",
+      "text_dark": "#1A1A18",
+      "text_muted": "#5A5954",
+      "border_soft": "#E4DFD7"
+    },
+    "typography": {
+      "font_family_heading": "'Playfair Display', serif",
+      "font_family_body": "'Plus Jakarta Sans', sans-serif"
+    },
+    "logistics": {
+      "whatsapp_number": "+56953672027",
+      "whatsapp_raw": "56953672027",
+      "hours": "Lunes a Sábado: 8:00 a 18:00 hrs",
+      "santiago_shipping": "Despacho a domicilio en Santiago (plazo aprox. 1 semana desde agendamiento). Notificación previa de ruta.",
+      "regional_shipping": "Envíos a todo Chile vía Starken, Chilexpress y Correos de Chile. Retiros 1 a 2 veces por semana. Número de seguimiento enviado por WhatsApp y correo.",
+      "payment_methods": "Transferencia electrónica (BancoEstado / Cuenta RUT / Otros bancos), Tarjetas de débito/crédito por link de pago."
+    }
+  },
+  "products": [
+    {
+      "id": "tratamiento-stop-caida-pack",
+      "name": "Tratamiento Stop Caída (Pack Ahorro 4 Piezas)",
+      "badge": "Más Vendido 🔥",
+      "category": "Packs",
+      "concern": ["Caída Severa", "Alopecia", "Crecimiento", "Zonas Calvas"],
+      "price": 32990,
+      "offer_price": 26610,
+      "format": "2 Shampoo (500ml c/u) + 2 Vitamina Capilar (Gotero 120ml c/u)",
+      "rating": 4.9,
+      "reviews_count": 842,
+      "image": "/images/products/stop-caida-pack.jpg",
+      "secondary_image": "/images/products/tratamiento-stop-caida.jpg",
+      "short_description": "Tratamiento intensivo stop caída formulado con más de 20 hierbas medicinales y aceite de romero concentrado para frenar la caída y reactivar el crecimiento en zonas despobladas.",
+      "benefits": [
+        "Estimula la aparición de cabellos nuevos en entradas y coronilla",
+        "98% de efectividad comprobada por clientas reales",
+        "Engruesa la raíz y fortalece la fibra capilar",
+        "Frena la caída por estrés, postparto, genética o postcirugía bariátrica"
+      ],
+      "active_ingredients": [
+        "Extracto Puro de Romero",
+        "Batana Oil Silvestre",
+        "Cola de Caballo",
+        "Ortiga Mayor",
+        "Biotina Pura",
+        "Colágeno Hidrolizado",
+        "Jengibre",
+        "Azafrán"
+      ],
+      "usage_step_by_step": [
+        "1. Gotero Vitamina Capilar: Agitar enérgicamente antes de aplicar para mezclar la fase acuosa y oleosa. Aplicar directamente en el cuero cabelludo limpio o seco, focalizando en entradas y zonas con menor densidad.",
+        "2. Masajear circularmente durante 2 a 3 minutos con la yema de los dedos para activar la microcirculación.",
+        "3. Lavado con Shampoo Stop Caída: Aplicar sobre cabello húmedo, masajear el cuero cabelludo dejando reposar la espuma con hierbas durante 3 minutos. Enjuagar con abundante agua.",
+        "4. Frecuencia recomendada: 3 veces por semana con constancia para cambios notorios en 30 a 90 días."
+      ]
+    },
+    {
+      "id": "duo-potenciador-crecimiento",
+      "name": "Dúo Potenciador de Crecimiento & Brillo (Shampoo + Acondicionador)",
+      "badge": "Favorito de la Comunidad ⭐",
+      "category": "Dúos",
+      "concern": ["Crecimiento", "Brillo", "Fortalecimiento", "Quiebre"],
+      "price": 28990,
+      "offer_price": 24990,
+      "format": "2 Botellas con dosificador pump (500ml c/u)",
+      "rating": 5.0,
+      "reviews_count": 615,
+      "image": "/images/products/duo-shampoo-acondicionador-magenta.jpg",
+      "secondary_image": "/images/products/duo-potenciador.jpg",
+      "short_description": "El famoso dúo potenciador que permitió a nuestras clientas ganar hasta 20 cm de crecimiento al año con suavidad sedosa y brillo diamante.",
+      "benefits": [
+        "Acelera el crecimiento capilar hasta el doble del ritmo normal",
+        "Evita el quiebre y las puntas abiertas",
+        "Aporta brillo radiante sin dejar sensación pesada ni grasa",
+        "Aroma botánico fresco y duradero"
+      ],
+      "active_ingredients": [
+        "Aceite de Jojoba Virgen",
+        "Romero Silvestre",
+        "Lavanda Orgánica",
+        "Biotina Compleja",
+        "Manteca de Karité",
+        "Proteína de Seda"
+      ],
+      "usage_step_by_step": [
+        "1. Shampoo: Aplicar en la raíz con el cabello mojado, masajear suavemente y dejar actuar 3 minutos para que los activos penetren.",
+        "2. Enjuagar abundantemente con agua tibia o fría.",
+        "3. Acondicionador: Aplicar de medios a puntas, desenredando con los dedos o peine de dientes anchos. Dejar actuar 2-3 minutos y enjuagar."
+      ]
+    },
+    {
+      "id": "vitamina-capilar-batana-tonico",
+      "name": "Tónico Bifásico Vitamina Capilar (Batana Oil + Romero + Jengibre)",
+      "badge": "Fórmula Concentrada 🌿",
+      "category": "Tónicos y Goteros",
+      "concern": ["Caída Severa", "Zonas Calvas", "Debilidad Folicular"],
+      "price": 18990,
+      "offer_price": 15990,
+      "format": "Frasco con aplicador gotero de precisión (120ml)",
+      "rating": 4.9,
+      "reviews_count": 420,
+      "image": "/images/products/vitamina-capilar-batana.png",
+      "secondary_image": "/images/products/tonico-bifasico-gotero.png",
+      "short_description": "Tratamiento bifásico concentrado con infusión de azafrán, Batana Oil y romero para repoblar folículos inactivos y frenar la caída desde la primera semana.",
+      "benefits": [
+        "Fórmula bifásica activa acuosa + oleosa",
+        "Nutre el folículo piloso debilitado con Batana Oil",
+        "El azafrán y jengibre estimulan la circulación sanguínea local",
+        "No engrasa el cuero cabelludo si se usa en la dosis indicada"
+      ],
+      "active_ingredients": [
+        "Batana Oil Hondureño",
+        "Romero Destilado",
+        "Jengibre Orgánico",
+        "Azafrán Natural",
+        "Vitamina E y Pantenol"
+      ],
+      "usage_step_by_step": [
+        "1. Agitar el envase muy bien hasta que ambas fases (acuosa y oleosa) se mezclen uniformemente.",
+        "2. Aplicar 8 a 12 gotas con la cánula directamente en las zonas de mayor preocupación (entradas, línea frontal o coronilla).",
+        "3. Masajear en círculos con las yemas durante 2 minutos. No enjuagar. Puede usarse en la noche antes de dormir o por la mañana."
+      ]
+    },
+    {
+      "id": "kit-completo-rapunzel-5-pasos",
+      "name": "Kit Completo Rapunzel Ritual 5 Pasos",
+      "badge": "Tratamiento Total ✨",
+      "category": "Kits Completos",
+      "concern": ["Crecimiento", "Caída Severa", "Reparación", "Frizz", "Brillo"],
+      "price": 58990,
+      "offer_price": 49990,
+      "format": "Shampoo (500ml) + Acondicionador (500ml) + Gotero Crecimiento (120ml) + Baño de Seda (300g) + Spray Biotina Sandía (250ml)",
+      "rating": 5.0,
+      "reviews_count": 1280,
+      "image": "/images/products/kit-completo.png",
+      "secondary_image": "/images/products/duo-shampoo-acondicionador-magenta.jpg",
+      "short_description": "El ritual supremo de regeneración capilar orgánica. Todo lo que tu cabello necesita para frenar la caída, disparar el crecimiento y obtener suavidad de peluquería en casa.",
+      "benefits": [
+        "Cuidado integral: Limpieza profunda + Nutrición + Estimulación + Hidratación + Termoprotección",
+        "Transformación visible desde los primeros 14 días",
+        "Ahorro máximo versus comprar cada producto individual",
+        "Incluye asesoría personalizada por WhatsApp durante todo el tratamiento"
+      ],
+      "active_ingredients": [
+        "Extracto de Romero y Batana Oil",
+        "Biotina y Colágeno",
+        "Aceite de Jojoba y Ricino",
+        "Extracto de Sandía y Pantenol",
+        "Keratina Vegetal y Aceite de Argán"
+      ],
+      "usage_step_by_step": [
+        "Paso 1 (Gotero): Aplicar 3 veces por semana antes de dormir en cuero cabelludo.",
+        "Paso 2 (Shampoo): Lavar masajeando 3 minutos.",
+        "Paso 3 (Acondicionador): Nutrir largos y puntas por 3 minutos.",
+        "Paso 4 (Baño de Seda): Mascarilla 1 vez por semana por 15-20 minutos.",
+        "Paso 5 (Spray Biotina Sandía): Pulverizar sobre cabello húmedo o seco para desenredar y proteger del calor."
+      ]
+    },
+    {
+      "id": "gotero-aceite-jojoba-romero",
+      "name": "Gotero Aceite Nutritivo de Jojoba, Romero & Lavanda",
+      "badge": "100% Puro 🌿",
+      "category": "Tónicos y Goteros",
+      "concern": ["Puntas Secas", "Cuero Cabelludo Seco", "Brillo", "Crecimiento"],
+      "price": 16990,
+      "offer_price": 13990,
+      "format": "Frasco de vidrio / aplicador gotero (100ml)",
+      "rating": 4.8,
+      "reviews_count": 310,
+      "image": "/images/products/shampoo-gotero-jojoba.jpg",
+      "secondary_image": "/images/products/aceite-romero-biotina.jpg",
+      "short_description": "Elixir oleoso puro para baño de aceite nocturno (hair oiling), sellado de puntas abiertas y alivio de cuero cabelludo seco o con descamación.",
+      "benefits": [
+        "Ideal para la técnica de 'Hair Oiling' pre-lavado",
+        "Sella la hidratación en puntas resecas y porosas",
+        "La lavanda calma la irritación del cuero cabelludo",
+        "Rápida absorción con toque sedoso"
+      ],
+      "active_ingredients": [
+        "Aceite de Jojoba Prensado en Frío",
+        "Aceite Esencial de Romero Quimiotipado",
+        "Lavanda Francesa",
+        "Aceite de Almendras Dulces"
+      ],
+      "usage_step_by_step": [
+        "1. Para cuero cabelludo: Aplicar 1 pipeta y masajear 30 minutos antes del lavado.",
+        "2. Para puntas: Frotar 2 gotas entre las palmas y aplicar suavemente sobre el cabello seco."
+      ]
+    },
+    {
+      "id": "shampoo-anticaida-romero-biotina",
+      "name": "Shampoo Anticaída y Crecimiento con Hierbas Molidas",
+      "badge": "Especialidad de la Casa 🌱",
+      "category": "Shampoos",
+      "concern": ["Caída", "Crecimiento", "Grasa", "Caspa"],
+      "price": 16990,
+      "offer_price": 14990,
+      "format": "Botella ergonómica 500ml",
+      "rating": 4.9,
+      "reviews_count": 920,
+      "image": "/images/products/shampoo-crecimiento.jpg",
+      "secondary_image": "/images/products/tonico-shampoo-pack.jpg",
+      "short_description": "Elaborado con una decocción artesanal de más de 20 hierbas medicinales. Contiene partículas reales de hierbas en suspensión para una exfoliación botánica suave del folículo.",
+      "benefits": [
+        "Limpia profundamente sin despojar los aceites protectores naturales",
+        "pH balanceado que no reseca el largo",
+        "Desobstruye los poros capilares facilitando el nacimiento de cabello nuevo",
+        "Libre de sal, sulfatos pesados y siliconas insolubles"
+      ],
+      "active_ingredients": [
+        "Romero",
+        "Ortiga Verde",
+        "Cola de Caballo",
+        "Cebolla Morada",
+        "Biotina",
+        "Colágeno Hidrolizado"
+      ],
+      "usage_step_by_step": [
+        "1. Humedecer completamente el cabello.",
+        "2. Aplicar una cantidad generosa en la raíz.",
+        "3. Masajear con yemas por 3 minutos completos para permitir la acción de las hierbas.",
+        "4. Enjuagar con agua abundante."
+      ]
+    }
+  ],
+  "quiz": {
+    "title": "Descubre tu Rutina Capilar Ideal",
+    "subtitle": "Responde 3 breves preguntas y te diremos exactamente qué combinación de ingredientes botánicos necesita tu cabello.",
+    "questions": [
+      {
+        "id": "concern",
+        "question": "¿Cuál es tu principal desafío capilar hoy?",
+        "options": [
+          {
+            "label": "Caída excesiva o zonas despobladas (alopecia, estrés, postparto)",
+            "value": "caida",
+            "tag": "Caída Severa"
+          },
+          {
+            "label": "Cabello estancado que no pasa de cierto largo y tarda mucho en crecer",
+            "value": "crecimiento",
+            "tag": "Crecimiento"
+          },
+          {
+            "label": "Cabello seco, quebradizo, poroso o con puntas abiertas",
+            "value": "dano",
+            "tag": "Reparación"
+          },
+          {
+            "label": "Quiero una transformación completa: más volumen, largo y nutrición",
+            "value": "completo",
+            "tag": "Cuidado Total"
+          }
+        ]
+      },
+      {
+        "id": "scalp_type",
+        "question": "¿Cómo sientes tu cuero cabelludo?",
+        "options": [
+          {
+            "label": "Graso o mixto (se ensucia rápidamente a los 1-2 días)",
+            "value": "graso"
+          },
+          {
+            "label": "Normal o equilibrado",
+            "value": "normal"
+          },
+          {
+            "label": "Seco, sensible o con picazón ocasional",
+            "value": "seco"
+          }
+        ]
+      },
+      {
+        "id": "routine_preference",
+        "question": "¿Qué tipo de rutina estás dispuesta a mantener con constancia?",
+        "options": [
+          {
+            "label": "Rutina intensiva con tónico y masajes para ver resultados rápidos",
+            "value": "intensiva"
+          },
+          {
+            "label": "Rutina básica de lavado diario/semanal (Shampoo + Acondicionador)",
+            "value": "basica"
+          },
+          {
+            "label": "El ritual completo de peluquería en casa (5 pasos)",
+            "value": "completa"
+          }
+        ]
+      }
+    ],
+    "recommendation_engine": {
+      "rules": [
+        {
+          "condition": "concern == 'caida' || (concern == 'crecimiento' && routine_preference == 'intensiva')",
+          "recommended_product_id": "tratamiento-stop-caida-pack",
+          "headline": "Tu Rutina Recomendada: Tratamiento Stop Caída",
+          "reason": "Tu cabello necesita frenar la miniaturización del folículo y reactivar la irrigación sanguínea. La sinergia del Shampoo botánico y la Vitamina Capilar con Batana Oil y Romero es la fórmula exacta que ha recuperado el cabello de más de 150.000 personas en Chile."
+        },
+        {
+          "condition": "concern == 'crecimiento' && routine_preference == 'basica'",
+          "recommended_product_id": "duo-potenciador-crecimiento",
+          "headline": "Tu Rutina Recomendada: Dúo Potenciador de Crecimiento",
+          "reason": "Para estimular hasta 20 cm de crecimiento al año sin complicaciones, este dúo fortalece la fibra capilar, previene el quiebre y aporta brillo extremo en cada lavado."
+        },
+        {
+          "condition": "concern == 'completo' || routine_preference == 'completa'",
+          "recommended_product_id": "kit-completo-rapunzel-5-pasos",
+          "headline": "Tu Rutina Recomendada: Kit Completo Rapunzel 5 Pasos",
+          "reason": "La solución integral definitiva. Cubre estimulación de raíz con el gotero, limpieza herbal, desenredo nutritivo, nutrición profunda con Baño de Seda y protección térmica con Biotina Sandía."
+        },
+        {
+          "condition": "default",
+          "recommended_product_id": "vitamina-capilar-batana-tonico",
+          "headline": "Tu Rutina Recomendada: Tónico Bifásico Vitamina Capilar",
+          "reason": "La concentración más pura de Batana Oil, Romero y Jengibre para fortalecer el nacimiento del cabello y recuperar la densidad perdida."
+        }
+      ]
+    }
+  },
+  "testimonials": [
+    {
+      "id": "testimonio-1",
+      "author": "Janisse Díaz (@janissediazp)",
+      "badge": "Clienta Verificada 🇨🇱",
+      "image": "/images/testimonials/clienta-janisse-kit.png",
+      "quote": "Feliz con mi kit completo de Rapunzel Organic. El cambio en la textura, brillo y crecimiento es innegable. 100% recomendado.",
+      "product_used": "Kit Completo 5 Pasos",
+      "time_used": "3 meses"
+    },
+    {
+      "id": "testimonio-2",
+      "author": "Cliente (@camilap_cl)",
+      "badge": "Caso Alopecia Superada",
+      "image": "/images/testimonials/antes-despues-coronilla-mujer.png",
+      "quote": "Quería compartir el cambio en el crecimiento de mi pelo desde que ocupo su producto. La primera foto es de cuando inicié en junio y la segunda de hoy. Estoy re contenta.",
+      "product_used": "Tratamiento Stop Caída",
+      "time_used": "4 meses"
+    },
+    {
+      "id": "testimonio-3",
+      "author": "Matías R.",
+      "badge": "Recuperación de Entradas Hombre",
+      "image": "/images/testimonials/antes-despues-hombre-entradas.jpg",
+      "quote": "Les comparto mi proceso: después de 4 meses usando el tratamiento Stop Caída, superó todas mis expectativas. Iba a hacerme un trasplante y este producto me salvó el cabello.",
+      "product_used": "Tónico + Shampoo",
+      "time_used": "4 meses"
+    },
+    {
+      "id": "testimonio-4",
+      "author": "Mamá en Lactancia",
+      "badge": "Caída Postparto",
+      "image": "/images/testimonials/testimonio-chat-lactancia.png",
+      "quote": "Súper feliz con los resultados en tan poco tiempo. Desde la lactancia se me caía muchísimo el cabello y tenía muy poco en las entradas. Ya veo cómo brota cabello nuevo.",
+      "product_used": "Vitamina Capilar + Shampoo",
+      "time_used": "2 meses"
+    },
+    {
+      "id": "testimonio-5",
+      "author": "Paciente Post Cirugía Bariátrica",
+      "badge": "Pérdida por Déficit Nutricional",
+      "image": "/images/testimonials/antes-despues-bariatrica.jpg",
+      "quote": "Después de mi cirugía bariátrica empecé a notar pérdida importante de cabello en laterales. Probé todo hasta que llegué a Rapunzel Organic y volví a sentirme segura.",
+      "product_used": "Tratamiento Stop Caída",
+      "time_used": "3 meses"
+    }
+  ],
+  "reels_showcase": [
+    {
+      "id": "reel-1",
+      "code": "DbtGOJCRsNo",
+      "title": "Tips infalibles para lograr el pelo largo de tus sueños",
+      "speaker": "Rapunzel Organic",
+      "quote": "Si necesitas tips para tener el pelo largo, este shampoo potencia el crecimiento y evita el quiebre. ¡El pelo cambia desde el inicio!",
+      "video_url": "/videos/reels/reel-tips-pelo-largo.mp4",
+      "thumbnail": "/images/products/shampoo-crecimiento.jpg"
+    },
+    {
+      "id": "reel-2",
+      "code": "DblEd7zxmBy",
+      "title": "20 cm de crecimiento real en 1 año",
+      "speaker": "Clienta Rapunzel",
+      "quote": "Tuve 20 cm de crecimiento en un año con el shampoo y acondicionador Rapunzel Organic. Crece sano, fuerte y brillante.",
+      "video_url": "/videos/reels/reel-crecimiento-20cm.mp4",
+      "thumbnail": "/images/products/duo-potenciador.jpg"
+    },
+    {
+      "id": "reel-3",
+      "code": "CxN2j0TLHk3",
+      "title": "¿Cómo hacer crecer el cabello en zonas calvas?",
+      "speaker": "Rapunzel Organic",
+      "quote": "Tratamiento Stop Caída: 98% orgánico, libre de crueldad, apto para todo tipo de cabello.",
+      "video_url": "/videos/reels/reel-zonas-calvas.mp4",
+      "thumbnail": "/images/products/stop-caida-pack.jpg"
+    },
+    {
+      "id": "reel-4",
+      "code": "Dct6bvjPT-9",
+      "title": "Resultados masculinos: 4 meses de constancia",
+      "speaker": "Cliente Hombre",
+      "quote": "Rutina utilizada: tónico + shampoo. Menos caída y más crecimiento. La constancia hace la diferencia.",
+      "video_url": "/videos/reels/reel-resultado-hombre-4meses.mp4",
+      "thumbnail": "/images/products/tonico-shampoo-pack.jpg"
+    }
+  ],
+  "faq": [
+    {
+      "question": "¿Por qué el tónico capilar se divide en dos fases y a veces cambia de color?",
+      "answer": "Es una fórmula 100% bifásica natural: cuenta con una fase acuosa con extractos hidrosolubles y una fase oleosa con aceites puros (Batana Oil, Romero, Jojoba). Solo debes agitar bien el frasco antes de usar para emulsionarlo. El tono amarillento o anaranjado se debe al azafrán puro, que según la cosecha puede tener ligeras variaciones de tonalidad sin alterar su efectividad."
+    },
+    {
+      "question": "¿Por qué el shampoo tiene pequeños sedimentos o restos en el fondo?",
+      "answer": "Nuestros shampoos son artesanales y botánicos, elaborados con más de 20 hierbas medicinales molidas (romero, ortiga, cola de caballo, cebolla). Esos sedimentos son trocitos naturales de las hierbas que continúan infusionando sus propiedades dentro de la botella."
+    },
+    {
+      "question": "¿En cuánto tiempo se ven los primeros resultados?",
+      "answer": "La disminución de la caída capilar suele notarse entre los 7 y 15 días de uso constante. El nacimiento de cabello nuevo y el engrosamiento en zonas despobladas se observa claramente entre el primer y tercer mes."
+    },
+    {
+      "question": "¿Se puede usar en embarazadas, período de lactancia o niñas/niños?",
+      "answer": "Sí, al ser una formulación 98% orgánica, libre de sulfatos agresivos, parabenos, siliconas pesadas y formaldehído, es completamente segura para mujeres en postparto, lactancia y jóvenes con problemas de caída o debilidad capilar."
+    },
+    {
+      "question": "¿Cómo se realizan los envíos a Santiago y Regiones?",
+      "answer": "En Santiago despachamos directo a domicilio con transporte privado (aproximadamente 1 semana desde que se agenda el pedido). Para regiones enviamos a todo Chile mediante Starken, Chilexpress y Correos de Chile, entregando el comprobante y número de seguimiento directo a tu WhatsApp."
+    },
+    {
+      "question": "¿Cómo compro si no tienen página web?",
+      "answer": "Ahora puedes agregar tus productos favoritos directamente en este catálogo online y presionar 'Finalizar Pedido por WhatsApp'. Se abrirá una conversación oficial con nuestro equipo con el detalle exacto de tu pedido para coordinar tus datos de envío y pago de forma rápida y segura."
+    }
+  ]
+}
