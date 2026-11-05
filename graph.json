@@ -1,12 +1,14 @@
 {
   "project": "Rapunzel Organic E-Commerce & Brand Engine",
-  "generated_at": "2026-11-04T19:00:00Z",
+  "generated_at": "2026-11-05T09:23:00Z",
   "architecture": {
     "framework": "Next.js 14 (App Router, Multi-Page SSG)",
     "styling": "Tailwind CSS + Custom Botanical Design System",
     "state_management": "React Context (CartContext + localStorage sync)",
     "checkout_engine": "WhatsApp Direct Checkout API (wa.me/56953672027)",
     "media_engine": "Native HTML5 Video + Responsive Images",
+    "catalog_sync": "Synchronized with WhatsApp Catalog (8 official formulas with verified CLP prices, intact side badges/circles, pure white canvas)",
+    "animations": "Framer Motion (layoutId pills, stagger grid entrance, card hover lift, reactive cart counter, spring modals)",
     "routes": [
       { "path": "/", "name": "Inicio (Landing Page)" },
       { "path": "/catalogo/", "name": "Catálogo Oficial" },
@@ -17,6 +19,7 @@
     ]
   },
   "nodes": [
+    { "id": "src/data/brand_bible.json", "type": "data_source", "description": "Single Source of Truth for brand info, 8 official products, prices, and quiz rules" },
     { "id": "src/app/layout.tsx", "type": "root_layout", "description": "Global layout with Navbar, Footer, CartDrawer, and ProductDetailModal" },
     { "id": "src/app/page.tsx", "type": "page", "route": "/" },
     { "id": "src/app/catalogo/page.tsx", "type": "page", "route": "/catalogo/" },
@@ -25,8 +28,10 @@
     { "id": "src/app/testimonios/page.tsx", "type": "page", "route": "/testimonios/" },
     { "id": "src/app/faq/page.tsx", "type": "page", "route": "/faq/" },
     { "id": "src/components/Navbar.tsx", "type": "ui_component" },
+    { "id": "src/components/Hero.tsx", "type": "ui_component" },
     { "id": "src/components/Footer.tsx", "type": "ui_component" },
     { "id": "src/components/Catalog.tsx", "type": "ui_component" },
+    { "id": "src/components/ProductDetailModal.tsx", "type": "ui_component" },
     { "id": "src/components/HairQuiz.tsx", "type": "ui_component" },
     { "id": "src/components/ReelsShowcase.tsx", "type": "ui_component" },
     { "id": "src/components/TestimonialsGallery.tsx", "type": "ui_component" },
@@ -34,9 +39,16 @@
     { "id": "src/components/CartDrawer.tsx", "type": "ui_component" }
   ],
   "edges": [
+    { "from": "src/data/brand_bible.json", "to": "src/components/Catalog.tsx" },
+    { "from": "src/data/brand_bible.json", "to": "src/components/Hero.tsx" },
+    { "from": "src/data/brand_bible.json", "to": "src/components/HairQuiz.tsx" },
+    { "from": "src/data/brand_bible.json", "to": "src/app/page.tsx" },
     { "from": "src/app/layout.tsx", "to": "src/components/Navbar.tsx" },
     { "from": "src/app/layout.tsx", "to": "src/components/Footer.tsx" },
     { "from": "src/app/layout.tsx", "to": "src/components/CartDrawer.tsx" },
+    { "from": "src/app/layout.tsx", "to": "src/components/ProductDetailModal.tsx" },
+    { "from": "src/app/page.tsx", "to": "src/components/Hero.tsx" },
+    { "from": "src/app/page.tsx", "to": "src/components/Catalog.tsx" },
     { "from": "src/app/catalogo/page.tsx", "to": "src/components/Catalog.tsx" },
     { "from": "src/app/diagnostico/page.tsx", "to": "src/components/HairQuiz.tsx" },
     { "from": "src/app/tutoriales/page.tsx", "to": "src/components/ReelsShowcase.tsx" },

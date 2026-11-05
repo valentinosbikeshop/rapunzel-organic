@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { motion, AnimatePresence } from 'framer-motion'
 import { ShoppingBag, Menu, X, Sparkles, MessageCircle } from 'lucide-react'
 import { useCart } from '@/context/CartContext'
 import brandData from '@/data/brand_bible.json'
@@ -94,20 +95,30 @@ export function Navbar() {
               <span>WhatsApp Oficial</span>
             </a>
 
-            {/* Shopping Cart Button */}
-            <button
+            {/* Shopping Cart Button with Micro-interaction */}
+            <motion.button
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.95 }}
               onClick={() => setIsCartOpen(true)}
               aria-label="Abrir carrito de compras"
-              className="relative p-2 sm:px-3 sm:py-1.5 rounded-full bg-botanical-600 hover:bg-botanical-700 text-white font-medium text-xs flex items-center gap-1.5 shadow-xs transition-all duration-200 active:scale-95"
+              className="relative p-2 sm:px-3 sm:py-1.5 rounded-full bg-botanical-600 hover:bg-botanical-700 text-white font-medium text-xs flex items-center gap-1.5 shadow-xs transition-colors duration-200"
             >
               <ShoppingBag className="w-4 h-4" />
               <span className="hidden sm:inline">Carrito</span>
-              {totalItems > 0 && (
-                <span className="bg-amber-oil text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">
-                  {totalItems}
-                </span>
-              )}
-            </button>
+              <AnimatePresence>
+                {totalItems > 0 && (
+                  <motion.span
+                    initial={{ scale: 0, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    exit={{ scale: 0, opacity: 0 }}
+                    transition={{ type: 'spring', stiffness: 500, damping: 25 }}
+                    className="bg-amber-500 text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center shadow-xs"
+                  >
+                    {totalItems}
+                  </motion.span>
+                )}
+              </AnimatePresence>
+            </motion.button>
 
             {/* Mobile Menu Toggle */}
             <button

@@ -61,207 +61,294 @@
   "products": [
     {
       "id": "tratamiento-stop-caida-pack",
-      "name": "Tratamiento Stop Caída (Pack Ahorro 4 Piezas)",
+      "name": "Tratamiento Stop Caída (Pack Ahorro 2 Piezas)",
       "badge": "Más Vendido 🔥",
       "category": "Packs",
-      "concern": ["Caída Severa", "Alopecia", "Crecimiento", "Zonas Calvas"],
+      "concern": [
+        "Caída Severa",
+        "Crecimiento",
+        "Alopecia",
+        "Zonas Calvas"
+      ],
       "price": 32990,
       "offer_price": 26610,
-      "format": "2 Shampoo (500ml c/u) + 2 Vitamina Capilar (Gotero 120ml c/u)",
+      "format": "Shampoo Regenerador (500ml) + Tónico Activador de Crecimiento (200ml)",
       "rating": 4.9,
-      "reviews_count": 842,
-      "image": "/images/products/stop-caida-pack.jpg",
-      "secondary_image": "/images/products/tratamiento-stop-caida.jpg",
-      "short_description": "Tratamiento intensivo stop caída formulado con más de 20 hierbas medicinales y aceite de romero concentrado para frenar la caída y reactivar el crecimiento en zonas despobladas.",
+      "reviews_count": 2840,
+      "image": "/images/products/pack-stop-caida.jpg",
+      "short_description": "Shampoo regenerador y tónico activador de crecimiento formulado con más de 20 hierbas medicinales. Estimula el nacimiento de cabellos nuevos y detiene la caída desde la raíz.",
       "benefits": [
-        "Estimula la aparición de cabellos nuevos en entradas y coronilla",
-        "98% de efectividad comprobada por clientas reales",
-        "Engruesa la raíz y fortalece la fibra capilar",
-        "Frena la caída por estrés, postparto, genética o postcirugía bariátrica"
+        "Estimula el nacimiento de cabellos nuevos donde lo apliques",
+        "Detiene la caída excesiva desde la raíz y fortalece las puntas",
+        "Enriquecido con más de 20 hierbas medicinales activas",
+        "Fórmula 98% orgánica, libre de químicos agresivos y sulfatos pesados"
       ],
       "active_ingredients": [
-        "Extracto Puro de Romero",
-        "Batana Oil Silvestre",
-        "Cola de Caballo",
-        "Ortiga Mayor",
-        "Biotina Pura",
-        "Colágeno Hidrolizado",
-        "Jengibre",
-        "Azafrán"
+        "Romero Silvestre",
+        "Batana Oil Pura",
+        "Jengibre Molido",
+        "Biotina Activa",
+        "Extracto de Ortiga"
       ],
       "usage_step_by_step": [
-        "1. Gotero Vitamina Capilar: Agitar enérgicamente antes de aplicar para mezclar la fase acuosa y oleosa. Aplicar directamente en el cuero cabelludo limpio o seco, focalizando en entradas y zonas con menor densidad.",
-        "2. Masajear circularmente durante 2 a 3 minutos con la yema de los dedos para activar la microcirculación.",
-        "3. Lavado con Shampoo Stop Caída: Aplicar sobre cabello húmedo, masajear el cuero cabelludo dejando reposar la espuma con hierbas durante 3 minutos. Enjuagar con abundante agua.",
-        "4. Frecuencia recomendada: 3 veces por semana con constancia para cambios notorios en 30 a 90 días."
+        "Lavar el cabello con el Shampoo masajeando suavemente en círculos durante 3 minutos para activar la microcirculación.",
+        "Enjuagar con abundante agua tibia o fría.",
+        "Aplicar el Tónico Activador directamente sobre el cuero cabelludo en las zonas despobladas o con caída.",
+        "Efectuar un suave masaje y dejar secar naturalmente. No necesita enjuague."
       ]
     },
     {
-      "id": "duo-potenciador-crecimiento",
-      "name": "Dúo Potenciador de Crecimiento & Brillo (Shampoo + Acondicionador)",
+      "id": "tratamiento-stop-caida-plus",
+      "name": "Tratamiento Stop Caída Plus (Pack 3 Piezas)",
+      "badge": "Fórmula Avanzada 🌿",
+      "category": "Packs",
+      "concern": [
+        "Caída Severa",
+        "Crecimiento",
+        "Zonas Calvas",
+        "Brillo"
+      ],
+      "price": 34990,
+      "offer_price": 28990,
+      "format": "Shampoo Anticaída (500ml) + Tónico Crecimiento (200ml) + Gotero Nutritivo Concentrado (30ml)",
+      "rating": 4.9,
+      "reviews_count": 1420,
+      "image": "/images/products/pack-stop-caida-plus.jpg",
+      "short_description": "Diseñado para darle a tu cabello un aspecto brillante y fuerte sin dejarlo grasoso ni pesado. Detiene la caída por quiebre y debilidad mientras controla el frizz y genera cabellos nuevos.",
+      "benefits": [
+        "Triple acción anticaída: limpia, estimula folículos y sella nutrientes",
+        "Genera cabellos nuevos y engrosa hebras finas y débiles",
+        "Control prolongado del frizz sin efecto graso ni pesado",
+        "Resultados acelerados visibles en las primeras semanas de constancia"
+      ],
+      "active_ingredients": [
+        "Biotina Pura",
+        "Aceite de Jojoba Virgen",
+        "Romero Orgánico",
+        "Batana Oil Concentrado",
+        "Pro-Vitamina B5"
+      ],
+      "usage_step_by_step": [
+        "Lavar con Shampoo Anticaída dejando reposar la espuma 3 minutos.",
+        "Aplicar el Tónico sobre el cuero cabelludo húmedo o seco.",
+        "Por las noches, aplicar 4 a 6 gotas del Gotero Regenerador directo en las zonas críticas o despobladas."
+      ]
+    },
+    {
+      "id": "duo-crecimiento-romero",
+      "name": "Dúo Crecimiento Acelerado (Shampoo + Acondicionador Romero & Biotina)",
       "badge": "Favorito de la Comunidad ⭐",
       "category": "Dúos",
-      "concern": ["Crecimiento", "Brillo", "Fortalecimiento", "Quiebre"],
-      "price": 28990,
-      "offer_price": 24990,
-      "format": "2 Botellas con dosificador pump (500ml c/u)",
-      "rating": 5.0,
-      "reviews_count": 615,
-      "image": "/images/products/duo-shampoo-acondicionador-magenta.jpg",
-      "secondary_image": "/images/products/duo-potenciador.jpg",
-      "short_description": "El famoso dúo potenciador que permitió a nuestras clientas ganar hasta 20 cm de crecimiento al año con suavidad sedosa y brillo diamante.",
+      "concern": [
+        "Crecimiento",
+        "Caída Severa",
+        "Brillo"
+      ],
+      "price": 32990,
+      "offer_price": 28990,
+      "format": "2 Botellas ergonómicas (Shampoo 500ml + Acondicionador 500ml)",
+      "rating": 4.9,
+      "reviews_count": 3180,
+      "image": "/images/products/duo-crecimiento-romero.jpg",
+      "short_description": "Limpia a profundidad el cuero cabelludo evitando que el crecimiento se estanque. Mejora la circulación sanguínea facilitando un crecimiento rápido, con acondicionador nutritivo sin sal.",
       "benefits": [
-        "Acelera el crecimiento capilar hasta el doble del ritmo normal",
-        "Evita el quiebre y las puntas abiertas",
-        "Aporta brillo radiante sin dejar sensación pesada ni grasa",
-        "Aroma botánico fresco y duradero"
+        "Limpia y oxigena en profundidad el folículo capilar",
+        "Mejora la circulación sanguínea acelerando el crecimiento natural",
+        "Acondicionador botánico que desenreda, aporta sedosidad y brillo",
+        "Sin sal ni siliconas pesadas que saturen la fibra capilar"
+      ],
+      "active_ingredients": [
+        "Romero en Polvo y Aceite Esencial",
+        "Biotina Activa",
+        "Extracto Botánico de Sandía",
+        "Aloe Vera Orgánico"
+      ],
+      "usage_step_by_step": [
+        "Aplicar Shampoo sobre el cabello mojado, masajear el cuero cabelludo y enjuagar.",
+        "Aplicar Acondicionador de medios a puntas, peinar suavemente con los dedos.",
+        "Dejar actuar 2 a 3 minutos y retirar con abundante agua."
+      ]
+    },
+    {
+      "id": "kit-estrella-ritual-completo",
+      "name": "Kit Estrella Rapunzel Ritual Completo (5 Pasos)",
+      "badge": "Ritual Supremo ✨",
+      "category": "Kits Completos",
+      "concern": [
+        "Caída Severa",
+        "Crecimiento",
+        "Alopecia",
+        "Zonas Calvas",
+        "Brillo"
+      ],
+      "price": 45990,
+      "offer_price": 35990,
+      "format": "Shampoo (500ml) + Acondicionador (500ml) + Tónico (200ml) + Baño de Seda (300g) + Gotero (30ml)",
+      "rating": 5.0,
+      "reviews_count": 1980,
+      "image": "/images/products/kit-estrella.jpg",
+      "short_description": "El kit estrella diseñado para cabellos dañados y con crecimiento lento. Combinación maestra de productos nutritivos y reparadores: Romero, Biotina, Baño de Seda y Gotero concentrado.",
+      "benefits": [
+        "Tratamiento completo de 5 pasos para una regeneración capilar total",
+        "Reconstruye la fibra capilar desde la raíz hasta las puntas abiertas",
+        "Acelera el crecimiento y rellena entradas y zonas con menor densidad",
+        "Hidratación profunda, nutrición celular y sellado térmico de cutículas"
+      ],
+      "active_ingredients": [
+        "Romero Silvestre",
+        "Biotina",
+        "Proteínas de Seda Hidrolizada",
+        "Batana Oil",
+        "Jojoba Virgen"
+      ],
+      "usage_step_by_step": [
+        "Paso 1: Lavar con Shampoo Romero y Biotina.",
+        "Paso 2: Acondicionar de medios a puntas y enjuagar.",
+        "Paso 3: Aplicar Baño de Seda 1 a 2 veces por semana por 15 minutos.",
+        "Paso 4: Pulverizar Tónico Crecimiento a diario en el cuero cabelludo.",
+        "Paso 5: Gotero Regenerador nocturno en zonas de menor densidad."
+      ]
+    },
+    {
+      "id": "tonico-jojoba-biotina",
+      "name": "Tónico Jojoba & Biotina Sandía",
+      "badge": "Crecimiento Rápido 🍉",
+      "category": "Tónicos y Goteros",
+      "concern": [
+        "Crecimiento",
+        "Caída Severa",
+        "Brillo"
+      ],
+      "price": 19990,
+      "offer_price": 15990,
+      "format": "Frasco pulverizador 200 ML",
+      "rating": 4.9,
+      "reviews_count": 2210,
+      "image": "/images/products/tonico-jojoba-biotina.jpg",
+      "short_description": "Fórmula natural que ofrece múltiples beneficios: hidratación inmediata, control del frizz, protección antioxidante y estimulación folicular para un crecimiento capilar acelerado.",
+      "benefits": [
+        "Acelera el crecimiento capilar estimulando la raíz",
+        "Controla el frizz rebelde y la estática por resequedad",
+        "Aporta hidratación botánica ligera sin dejar residuo graso",
+        "Delicioso aroma fresco y natural a sandía"
       ],
       "active_ingredients": [
         "Aceite de Jojoba Virgen",
-        "Romero Silvestre",
-        "Lavanda Orgánica",
-        "Biotina Compleja",
-        "Manteca de Karité",
-        "Proteína de Seda"
+        "Biotina Pura",
+        "Extracto Botánico de Sandía",
+        "Vitamina E"
       ],
       "usage_step_by_step": [
-        "1. Shampoo: Aplicar en la raíz con el cabello mojado, masajear suavemente y dejar actuar 3 minutos para que los activos penetren.",
-        "2. Enjuagar abundantemente con agua tibia o fría.",
-        "3. Acondicionador: Aplicar de medios a puntas, desenredando con los dedos o peine de dientes anchos. Dejar actuar 2-3 minutos y enjuagar."
+        "Agitar enérgicamente antes de cada uso.",
+        "Rociar de 4 a 6 aplicaciones directamente sobre la raíz y largo del cabello.",
+        "Masajear durante 2 minutos. No necesita enjuagar."
       ]
     },
     {
-      "id": "vitamina-capilar-batana-tonico",
-      "name": "Tónico Bifásico Vitamina Capilar (Batana Oil + Romero + Jengibre)",
-      "badge": "Fórmula Concentrada 🌿",
+      "id": "gotero-regenerador-vitamina-capilar",
+      "name": "Gotero Regenerador Vitamina Capilar",
+      "badge": "Concentrado Puro 💧",
       "category": "Tónicos y Goteros",
-      "concern": ["Caída Severa", "Zonas Calvas", "Debilidad Folicular"],
+      "concern": [
+        "Caída Severa",
+        "Alopecia",
+        "Zonas Calvas",
+        "Crecimiento"
+      ],
       "price": 18990,
       "offer_price": 15990,
-      "format": "Frasco con aplicador gotero de precisión (120ml)",
+      "format": "Frasco de vidrio ámbar con gotero de precisión 30 ML",
       "rating": 4.9,
-      "reviews_count": 420,
-      "image": "/images/products/vitamina-capilar-batana.png",
-      "secondary_image": "/images/products/tonico-bifasico-gotero.png",
-      "short_description": "Tratamiento bifásico concentrado con infusión de azafrán, Batana Oil y romero para repoblar folículos inactivos y frenar la caída desde la primera semana.",
+      "reviews_count": 1890,
+      "image": "/images/products/gotero-regenerador.jpg",
+      "short_description": "Ideal para personas con caída abundante o zonas calvas. Su fórmula milagrosa con romero, jojoba y biotina hace crecer el cabello mientras engrosa las hebras debilitadas.",
       "benefits": [
-        "Fórmula bifásica activa acuosa + oleosa",
-        "Nutre el folículo piloso debilitado con Batana Oil",
-        "El azafrán y jengibre estimulan la circulación sanguínea local",
-        "No engrasa el cuero cabelludo si se usa en la dosis indicada"
+        "Frenado intensivo de la caída en zonas críticas y despobladas",
+        "Engrosa el calibre de las hebras finas dándoles cuerpo y volumen",
+        "Fórmula pura superconcentrada de absorción folicular directa",
+        "Ideal para tratamiento intensivo nocturno (hair oiling)"
       ],
       "active_ingredients": [
-        "Batana Oil Hondureño",
-        "Romero Destilado",
-        "Jengibre Orgánico",
-        "Azafrán Natural",
-        "Vitamina E y Pantenol"
-      ],
-      "usage_step_by_step": [
-        "1. Agitar el envase muy bien hasta que ambas fases (acuosa y oleosa) se mezclen uniformemente.",
-        "2. Aplicar 8 a 12 gotas con la cánula directamente en las zonas de mayor preocupación (entradas, línea frontal o coronilla).",
-        "3. Masajear en círculos con las yemas durante 2 minutos. No enjuagar. Puede usarse en la noche antes de dormir o por la mañana."
-      ]
-    },
-    {
-      "id": "kit-completo-rapunzel-5-pasos",
-      "name": "Kit Completo Rapunzel Ritual 5 Pasos",
-      "badge": "Tratamiento Total ✨",
-      "category": "Kits Completos",
-      "concern": ["Crecimiento", "Caída Severa", "Reparación", "Frizz", "Brillo"],
-      "price": 58990,
-      "offer_price": 49990,
-      "format": "Shampoo (500ml) + Acondicionador (500ml) + Gotero Crecimiento (120ml) + Baño de Seda (300g) + Spray Biotina Sandía (250ml)",
-      "rating": 5.0,
-      "reviews_count": 1280,
-      "image": "/images/products/kit-completo.png",
-      "secondary_image": "/images/products/duo-shampoo-acondicionador-magenta.jpg",
-      "short_description": "El ritual supremo de regeneración capilar orgánica. Todo lo que tu cabello necesita para frenar la caída, disparar el crecimiento y obtener suavidad de peluquería en casa.",
-      "benefits": [
-        "Cuidado integral: Limpieza profunda + Nutrición + Estimulación + Hidratación + Termoprotección",
-        "Transformación visible desde los primeros 14 días",
-        "Ahorro máximo versus comprar cada producto individual",
-        "Incluye asesoría personalizada por WhatsApp durante todo el tratamiento"
-      ],
-      "active_ingredients": [
-        "Extracto de Romero y Batana Oil",
-        "Biotina y Colágeno",
-        "Aceite de Jojoba y Ricino",
-        "Extracto de Sandía y Pantenol",
-        "Keratina Vegetal y Aceite de Argán"
-      ],
-      "usage_step_by_step": [
-        "Paso 1 (Gotero): Aplicar 3 veces por semana antes de dormir en cuero cabelludo.",
-        "Paso 2 (Shampoo): Lavar masajeando 3 minutos.",
-        "Paso 3 (Acondicionador): Nutrir largos y puntas por 3 minutos.",
-        "Paso 4 (Baño de Seda): Mascarilla 1 vez por semana por 15-20 minutos.",
-        "Paso 5 (Spray Biotina Sandía): Pulverizar sobre cabello húmedo o seco para desenredar y proteger del calor."
-      ]
-    },
-    {
-      "id": "gotero-aceite-jojoba-romero",
-      "name": "Gotero Aceite Nutritivo de Jojoba, Romero & Lavanda",
-      "badge": "100% Puro 🌿",
-      "category": "Tónicos y Goteros",
-      "concern": ["Puntas Secas", "Cuero Cabelludo Seco", "Brillo", "Crecimiento"],
-      "price": 16990,
-      "offer_price": 13990,
-      "format": "Frasco de vidrio / aplicador gotero (100ml)",
-      "rating": 4.8,
-      "reviews_count": 310,
-      "image": "/images/products/shampoo-gotero-jojoba.jpg",
-      "secondary_image": "/images/products/aceite-romero-biotina.jpg",
-      "short_description": "Elixir oleoso puro para baño de aceite nocturno (hair oiling), sellado de puntas abiertas y alivio de cuero cabelludo seco o con descamación.",
-      "benefits": [
-        "Ideal para la técnica de 'Hair Oiling' pre-lavado",
-        "Sella la hidratación en puntas resecas y porosas",
-        "La lavanda calma la irritación del cuero cabelludo",
-        "Rápida absorción con toque sedoso"
-      ],
-      "active_ingredients": [
+        "Aceite Puro de Romero",
         "Aceite de Jojoba Prensado en Frío",
-        "Aceite Esencial de Romero Quimiotipado",
-        "Lavanda Francesa",
-        "Aceite de Almendras Dulces"
+        "Biotina Concentrada",
+        "Batana Oil"
       ],
       "usage_step_by_step": [
-        "1. Para cuero cabelludo: Aplicar 1 pipeta y masajear 30 minutos antes del lavado.",
-        "2. Para puntas: Frotar 2 gotas entre las palmas y aplicar suavemente sobre el cabello seco."
+        "Separar el cabello descubriendo el cuero cabelludo en el área a tratar.",
+        "Aplicar 3 a 5 gotas con la pipeta directamente en la piel.",
+        "Masajear suavemente con movimientos circulares durante 3 minutos.",
+        "Dejar actuar toda la noche o un mínimo de 4 horas."
       ]
     },
     {
-      "id": "shampoo-anticaida-romero-biotina",
-      "name": "Shampoo Anticaída y Crecimiento con Hierbas Molidas",
-      "badge": "Especialidad de la Casa 🌱",
-      "category": "Shampoos",
-      "concern": ["Caída", "Crecimiento", "Grasa", "Caspa"],
-      "price": 16990,
-      "offer_price": 14990,
-      "format": "Botella ergonómica 500ml",
-      "rating": 4.9,
-      "reviews_count": 920,
-      "image": "/images/products/shampoo-crecimiento.jpg",
-      "secondary_image": "/images/products/tonico-shampoo-pack.jpg",
-      "short_description": "Elaborado con una decocción artesanal de más de 20 hierbas medicinales. Contiene partículas reales de hierbas en suspensión para una exfoliación botánica suave del folículo.",
+      "id": "spray-biotina-sandia",
+      "name": "Spray de Biotina Sandía",
+      "badge": "Hidratación & Brillo 🍉",
+      "category": "Tónicos y Goteros",
+      "concern": [
+        "Brillo",
+        "Crecimiento"
+      ],
+      "price": 15990,
+      "offer_price": 12990,
+      "format": "Botella pulverizadora 250 ML",
+      "rating": 4.8,
+      "reviews_count": 960,
+      "image": "/images/products/spray-biotina-sandia.jpg",
+      "short_description": "Spray de biotina diseñado para hidratar y nutrir el cabello profundamente, mientras protege la fibra de agresiones externas y repara daños por calor o sequedad.",
       "benefits": [
-        "Limpia profundamente sin despojar los aceites protectores naturales",
-        "pH balanceado que no reseca el largo",
-        "Desobstruye los poros capilares facilitando el nacimiento de cabello nuevo",
-        "Libre de sal, sulfatos pesados y siliconas insolubles"
+        "Hidrata y nutre al instante dejando el cabello suave y desenredado",
+        "Protege contra el calor del secador y la radiación solar",
+        "Aroma adictivo y duradero a sandía fresca",
+        "Textura líquida ligera que no altera el volumen natural"
       ],
       "active_ingredients": [
-        "Romero",
-        "Ortiga Verde",
-        "Cola de Caballo",
-        "Cebolla Morada",
-        "Biotina",
-        "Colágeno Hidrolizado"
+        "Biotina Líquida",
+        "Extracto Frutal de Sandía",
+        "Pantenol",
+        "Agua Termal Botánica"
       ],
       "usage_step_by_step": [
-        "1. Humedecer completamente el cabello.",
-        "2. Aplicar una cantidad generosa en la raíz.",
-        "3. Masajear con yemas por 3 minutos completos para permitir la acción de las hierbas.",
-        "4. Enjuagar con agua abundante."
+        "Agitar el producto.",
+        "Pulverizar a unos 20 cm sobre el cabello húmedo tras el lavado o seco entre lavados.",
+        "Peinar para distribuir uniformemente. No enjuagar."
+      ]
+    },
+    {
+      "id": "bano-de-seda-capilar",
+      "name": "Baño de Seda Capilar (Reparación Profunda)",
+      "badge": "Reparación Total 💆‍♀️",
+      "category": "Tratamientos",
+      "concern": [
+        "Brillo",
+        "Caída Severa"
+      ],
+      "price": 16990,
+      "offer_price": 12990,
+      "format": "Pote de Tratamiento Concentrado 300g",
+      "rating": 4.9,
+      "reviews_count": 1670,
+      "image": "/images/products/bano-de-seda.jpg",
+      "short_description": "Tratamiento intensivo que nutre y repara el cabello dañado dejándolo suave, brillante y manejable. Brinda hidratación profunda, reparación estructural, suavidad y brillo.",
+      "benefits": [
+        "Sella cutículas abiertas y repara puntas partidas o quemadas",
+        "Recupera la textura sedosa y manejabilidad del cabello reseco",
+        "Efecto espejo luminoso desde el primer uso",
+        "Nutre profundamente sin aportar peso ni apelmazar"
+      ],
+      "active_ingredients": [
+        "Proteínas de Seda Hidrolizada",
+        "Biotina",
+        "Vitamina Capilar",
+        "Manteca de Karité",
+        "Aceite de Coco Botánico"
+      ],
+      "usage_step_by_step": [
+        "Lavar el cabello y retirar el exceso de humedad.",
+        "Aplicar de medios a puntas masajeando mechón por mechón.",
+        "Dejar actuar entre 15 a 20 minutos (preferiblemente con gorro térmico).",
+        "Enjuagar abundantemente con agua tibia."
       ]
     }
   ],
@@ -342,19 +429,19 @@
         },
         {
           "condition": "concern == 'crecimiento' && routine_preference == 'basica'",
-          "recommended_product_id": "duo-potenciador-crecimiento",
+          "recommended_product_id": "duo-crecimiento-romero",
           "headline": "Tu Rutina Recomendada: Dúo Potenciador de Crecimiento",
           "reason": "Para estimular hasta 20 cm de crecimiento al año sin complicaciones, este dúo fortalece la fibra capilar, previene el quiebre y aporta brillo extremo en cada lavado."
         },
         {
           "condition": "concern == 'completo' || routine_preference == 'completa'",
-          "recommended_product_id": "kit-completo-rapunzel-5-pasos",
+          "recommended_product_id": "kit-estrella-ritual-completo",
           "headline": "Tu Rutina Recomendada: Kit Completo Rapunzel 5 Pasos",
           "reason": "La solución integral definitiva. Cubre estimulación de raíz con el gotero, limpieza herbal, desenredo nutritivo, nutrición profunda con Baño de Seda y protección térmica con Biotina Sandía."
         },
         {
           "condition": "default",
-          "recommended_product_id": "vitamina-capilar-batana-tonico",
+          "recommended_product_id": "tonico-jojoba-biotina",
           "headline": "Tu Rutina Recomendada: Tónico Bifásico Vitamina Capilar",
           "reason": "La concentración más pura de Batana Oil, Romero y Jengibre para fortalecer el nacimiento del cabello y recuperar la densidad perdida."
         }

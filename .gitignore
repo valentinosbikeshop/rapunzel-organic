@@ -17,6 +17,8 @@ scraper_data/
 .venv/
 __pycache__/
 *.pyc
+test_results/
+test_*.py
 
 # Misc
 .DS_Store
